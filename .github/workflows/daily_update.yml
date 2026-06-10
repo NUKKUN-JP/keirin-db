@@ -45,7 +45,7 @@ jobs:
           KEIRIN_AUTO: '1'
           KEIRIN_CATCHUP: '1'
           KEIRIN_INIT_START: '20260101'
-          KEIRIN_CHUNK_DAYS: '5'
+          KEIRIN_CHUNK_DAYS: '10'
           KEIRIN_START: ${{ github.event.inputs.start_date }}
           KEIRIN_END: ${{ github.event.inputs.end_date }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
@@ -57,7 +57,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A -- keirin_data_scored_v2.jsonl fetch_progress.txt fetch_state.json || true
+          # 【修正】存在するファイルだけを個別にadd（存在しないファイルで全体が失敗しないように）
+          for f in keirin_data_scored_v2.jsonl fetch_progress.txt fetch_state.json; do
+            if [ -f "$f" ]; then
+              git add "$f"
+            fi
+          done
           if git diff --cached --quiet; then
             echo "変更なし、コミットスキップ"
           else
