@@ -3,7 +3,7 @@ name: 競輪DB自動構築
 on:
   schedule:
     # 毎時実行（実質の常時稼働）。休止中・取得済みのときは数十秒で終了する
-    - cron: '0 * * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
     inputs:
       start_date:
@@ -45,7 +45,7 @@ jobs:
           KEIRIN_AUTO: '1'
           KEIRIN_CATCHUP: '1'
           KEIRIN_INIT_START: '20260101'
-          KEIRIN_CHUNK_DAYS: '10'
+          KEIRIN_CHUNK_DAYS: '30'
           KEIRIN_START: ${{ github.event.inputs.start_date }}
           KEIRIN_END: ${{ github.event.inputs.end_date }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
