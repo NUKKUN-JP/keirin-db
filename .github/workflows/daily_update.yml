@@ -1,0 +1,67 @@
+name: 競輪DB自動構築
+
+on:
+  schedule:
+    # 毎時実行（実質の常時稼働）。休止中・取得済みのときは数十秒で終了する
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: '取得開始日 YYYYMMDD（空欄ならキャッチアップ続行）'
+        required: false
+        default: ''
+      end_date:
+        description: '取得終了日 YYYYMMDD（空欄なら開始日と同じ）'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-fetch
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリインストール
+        run: pip install -r requirements.txt
+
+      - name: データ取得実行
+        env:
+          KEIRIN_AUTO: '1'
+          KEIRIN_CATCHUP: '1'
+          KEIRIN_INIT_START: '20260101'
+          KEIRIN_CHUNK_DAYS: '5'
+          KEIRIN_START: ${{ github.event.inputs.start_date }}
+          KEIRIN_END: ${{ github.event.inputs.end_date }}
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+        run: python fetch_keirin_data_v19.py
+
+      - name: DB・進捗・状態をコミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A -- keirin_data_scored_v2.jsonl fetch_progress.txt fetch_state.json || true
+          if git diff --cached --quiet; then
+            echo "変更なし、コミットスキップ"
+          else
+            git commit -m "DB更新: $(date +%Y%m%d_%H%M)"
+            git pull --rebase
+            git push
+          fi
