@@ -1,0 +1,63 @@
+name: 当日基本データ事前取得
+
+on:
+  schedule:
+    # JST 6:00 / 6:30 (UTC 21:00 / 21:30)。朝7時までに当日出走表を取得 (要件③)
+    # 6:00成功なら6:30は即終了。6:30も失敗ならLINE通知 → アプリは従来動作に自動フォールバック
+    - cron: '0 21 * * *'
+    - cron: '30 21 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '取得日 YYYYMMDD（空欄=今日）'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-today
+  cancel-in-progress: false
+
+jobs:
+  fetch_today:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリインストール
+        run: pip install -r requirements.txt
+
+      - name: 当日基本データ取得
+        env:
+          KEIRIN_DATE: ${{ github.event.inputs.date }}
+          KEIRIN_NOTIFY_FAIL: ${{ github.event.schedule == '30 21 * * *' && '1' || '0' }}
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+        run: python fetch_today_basic_v1.py
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -d today_cache ]; then
+            git add -A today_cache/
+          fi
+          if git diff --cached --quiet; then
+            echo "変更なし、コミットスキップ"
+          else
+            git commit -m "当日データ: $(date +%Y%m%d_%H%M)"
+            git pull --rebase
+            git push
+          fi
