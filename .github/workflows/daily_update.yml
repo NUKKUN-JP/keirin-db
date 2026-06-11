@@ -58,9 +58,10 @@ jobs:
           KEIRIN_CHUNK_DAYS: '30'
           KEIRIN_START: ${{ github.event.inputs.start_date }}
           KEIRIN_END: ${{ github.event.inputs.end_date }}
+          KEIRIN_IGNORE_PAUSE: ${{ github.event.schedule == '30 20 * * *' && '1' || '0' }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
-        run: python fetch_keirin_data_v19.py
+        run: python fetch_keirin_data_v20.py
 
       - name: 一体型DBを月別ファイルに分割
         if: always()
