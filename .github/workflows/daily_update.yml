@@ -2,8 +2,15 @@ name: 競輪DB自動構築
 
 on:
   schedule:
-    # 毎時実行（実質の常時稼働）。休止中・取得済みのときは数十秒で終了する
-    - cron: '17 * * * *'
+    # ===== 競輪業務時間割 (JST基準 / cronはUTC表記 = JST-9時間) =====
+    # サイトメンテ時間帯 (JST 1:00-5:00 = UTC 16:00-20:00) は実行しない
+    #
+    # ① 当日結果の確定取得: JST 0:05 と 0:35 (結果掲載0:00ころ → 0:30までに反映)
+    - cron: '5,35 15 * * *'
+    # ② メンテ明けの保険: JST 5:30 (0時台に失敗していた場合のリカバリ)
+    - cron: '30 20 * * *'
+    # ③ 日中の毎時実行: JST 6:17-23:17 (キャッチアップ進行 + 取りこぼし回収)
+    - cron: '17 0-14,21-23 * * *'
   workflow_dispatch:
     inputs:
       start_date:
@@ -40,6 +47,9 @@ jobs:
       - name: ライブラリインストール
         run: pip install -r requirements.txt
 
+      - name: 月別ファイルから一体型DBを再構築
+        run: python split_monthly_v1.py rebuild
+
       - name: データ取得実行
         env:
           KEIRIN_AUTO: '1'
@@ -52,13 +62,22 @@ jobs:
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
         run: python fetch_keirin_data_v19.py
 
-      - name: DB・進捗・状態をコミット＆プッシュ
+      - name: 一体型DBを月別ファイルに分割
+        if: always()
+        run: python split_monthly_v1.py split
+
+      - name: 月別DB・進捗・状態をコミット＆プッシュ
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # 【修正】存在するファイルだけを個別にadd（存在しないファイルで全体が失敗しないように）
-          for f in keirin_data_scored_v2.jsonl fetch_progress.txt fetch_state.json; do
+          # 一体型はリポジトリから外す (月別へ移行。作業用としてランナー内にのみ存在)
+          git rm --cached keirin_data_scored_v2.jsonl 2>/dev/null || true
+          # 存在するものだけを個別にadd
+          if [ -d keirin_months ]; then
+            git add keirin_months/
+          fi
+          for f in fetch_progress.txt fetch_state.json; do
             if [ -f "$f" ]; then
               git add "$f"
             fi
@@ -67,6 +86,13 @@ jobs:
             echo "変更なし、コミットスキップ"
           else
             git commit -m "DB更新: $(date +%Y%m%d_%H%M)"
-            git pull --rebase
-            git push
+            # 他のRunと同時実行で衝突した場合: 成果を捨てて正常終了する。
+            # 進捗ファイルが更新されないため、次回実行が同じ範囲をやり直す
+            # (取得済みレースはID照合でスキップされるので高速・重複なし)
+            if ! git pull --rebase; then
+              git rebase --abort || true
+              echo "::warning::他のRunと衝突したため今回の成果は破棄。次回実行が自動回収します"
+              exit 0
+            fi
+            git push || { echo "::warning::push失敗。次回実行が自動回収します"; exit 0; }
           fi
