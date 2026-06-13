@@ -6,10 +6,17 @@ on:
     # 6:00成功なら6:30は即終了。6:30も失敗ならLINE通知 → アプリは従来動作に自動フォールバック
     - cron: '0 21 * * *'
     - cron: '30 21 * * *'
+    # JST 14:05 / 15:05 (UTC 5:05 / 6:05): ライン補完 (ミッドナイトは午後掲載のため)
+    - cron: '5 5 * * *'
+    - cron: '5 6 * * *'
   workflow_dispatch:
     inputs:
       date:
         description: '取得日 YYYYMMDD（空欄=今日）'
+        required: false
+        default: ''
+      line_heal:
+        description: 'ライン補完モード（1=有効）'
         required: false
         default: ''
 
@@ -42,9 +49,10 @@ jobs:
         env:
           KEIRIN_DATE: ${{ github.event.inputs.date }}
           KEIRIN_NOTIFY_FAIL: ${{ github.event.schedule == '30 21 * * *' && '1' || '0' }}
+          KEIRIN_LINE_HEAL: ${{ (github.event.schedule == '5 5 * * *' || github.event.schedule == '5 6 * * *' || github.event.inputs.line_heal == '1') && '1' || '0' }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
-        run: python fetch_today_basic_v3.py
+        run: python fetch_today_basic_v4.py
 
       - name: コミット＆プッシュ
         if: always()
