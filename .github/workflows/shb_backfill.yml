@@ -1,0 +1,78 @@
+name: SHB補完 (一度きり)
+
+# S/H/B (スタート/ホーム/バック) を winticket から取得し DB に補完する。
+# 過去レースも cup_id 推定で取得可能。一度きりの全期間補完を想定。
+# 手動実行のみ (workflow_dispatch)。期間を分けて複数回流すことも可能。
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: '補完開始日 YYYYMMDD (空欄=最初から)'
+        required: false
+        default: ''
+      to_date:
+        description: '補完終了日 YYYYMMDD (空欄=最後まで)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-shb-backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350   # 大量レースのため長め (上限約6時間)
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 依存インストール
+        run: pip install requests
+
+      - name: DBパス確認
+        run: |
+          if [ -f takusen/data/keirin_data_scored_v2.jsonl ]; then
+            echo "KEIRIN_DB=takusen/data/keirin_data_scored_v2.jsonl" >> $GITHUB_ENV
+          elif [ -f keirin_data_scored_v2.jsonl ]; then
+            echo "KEIRIN_DB=keirin_data_scored_v2.jsonl" >> $GITHUB_ENV
+          else
+            echo "DBが見つかりません"; ls -R | head -50; exit 1
+          fi
+
+      - name: S/H/B補完 実行
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.from_date }}" ]; then
+            ARGS="$ARGS --from ${{ github.event.inputs.from_date }}"
+          fi
+          if [ -n "${{ github.event.inputs.to_date }}" ]; then
+            ARGS="$ARGS --to ${{ github.event.inputs.to_date }}"
+          fi
+          echo "実行: python backfill_shb_github_v1.py $ARGS"
+          python backfill_shb_github_v1.py $ARGS
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "S/H/B補完: $(date +%Y%m%d_%H%M)"
+            git pull --rebase --autostash || true
+            git push
+          fi
