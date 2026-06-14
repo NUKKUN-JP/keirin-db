@@ -1,0 +1,85 @@
+name: SHB補完 年別 (一度きり)
+
+# 年別 .gz ファイル (db_by_year/keirin_YYYY.jsonl.gz) に S/H/B を補完する。
+# GitHub Web UI の25MB制限を回避するため年別に分割したファイルを処理。
+# 手動実行。year を指定すればその年だけ、空欄なら見つかった全年を順に処理。
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: '対象年 YYYY (空欄=全年を順に処理)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-shb-backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 依存インストール
+        run: pip install requests
+
+      - name: 年別ファイルを探して補完
+        run: |
+          # keirin_YYYY.jsonl.gz を db_by_year/ または直下から探す
+          DIR=""
+          if [ -d db_by_year ] && ls db_by_year/keirin_*.jsonl.gz >/dev/null 2>&1; then
+            DIR="db_by_year"
+          elif [ -d takusen/data/db_by_year ] && ls takusen/data/db_by_year/keirin_*.jsonl.gz >/dev/null 2>&1; then
+            DIR="takusen/data/db_by_year"
+          elif ls keirin_*.jsonl.gz >/dev/null 2>&1; then
+            DIR="."
+          fi
+          if [ -z "$DIR" ]; then
+            echo "年別 .gz が見つかりません (keirin_YYYY.jsonl.gz)"; ls -R | head -40; exit 1
+          fi
+          echo "対象フォルダ: $DIR"
+
+          YEAR_IN="${{ github.event.inputs.year }}"
+          if [ -n "$YEAR_IN" ]; then
+            FILES="$DIR/keirin_${YEAR_IN}.jsonl.gz"
+          else
+            FILES=$(ls $DIR/keirin_*.jsonl.gz 2>/dev/null)
+          fi
+          if [ -z "$FILES" ]; then
+            echo "対象 .gz が見つかりません ($DIR)"; ls -la "$DIR"; exit 1
+          fi
+
+          for FP in $FILES; do
+            echo "=================================================="
+            echo " 補完対象: $FP"
+            echo "=================================================="
+            KEIRIN_DB="$FP" KEIRIN_WORKERS=10 python backfill_shb_github_v3.py
+          done
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "S/H/B補完(年別): $(date +%Y%m%d_%H%M)"
+            git pull --rebase --autostash || true
+            git push
+          fi
