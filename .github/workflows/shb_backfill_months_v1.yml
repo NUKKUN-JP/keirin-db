@@ -1,0 +1,121 @@
+name: SHB補完 月別ファイル (日付範囲指定)
+
+# GitHub上の実質本番DB = keirin_months/keirin_YYYYMM.jsonl (月別) に
+# S/H/B を直接補完する。本番DB本体(keirin_data_scored_v2.jsonl, 240MB)は
+# 25MB制限のためGitHubに無いので、アプリ同期対象の月別ファイルを直接埋める。
+#
+# アプリは託宣ボタン押下時に sync_db_months で月別差分を取得するため、
+# このワークフロー実行後はアプリに自動反映される (手動マージ不要)。
+#
+# 使い方 (手動実行):
+#   start_date / end_date を YYYYMMDD で指定。該当する月の月別ファイルだけ
+#   処理し、各ファイル内でも日付範囲で絞り込む。空欄なら全月・全期間。
+#   既に S/B 補完済みのレコードは has_shb 判定でスキップ。
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: '補完開始日 YYYYMMDD (空欄=全期間)'
+        required: false
+        default: ''
+      end_date:
+        description: '補完終了日 YYYYMMDD (空欄=全期間)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-shb-months
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 依存インストール
+        run: pip install requests
+
+      - name: 月別ファイルにS/H/B補完
+        shell: bash
+        run: |
+          MDIR=""
+          if [ -d keirin_months ]; then
+            MDIR="keirin_months"
+          elif [ -d takusen/data/keirin_months ]; then
+            MDIR="takusen/data/keirin_months"
+          fi
+          if [ -z "$MDIR" ]; then
+            echo "keirin_months が見つかりません"; ls -R | head -40; exit 1
+          fi
+          echo "月別フォルダ: $MDIR"
+
+          SD="${{ github.event.inputs.start_date }}"
+          ED="${{ github.event.inputs.end_date }}"
+
+          # 日付範囲を --from/--to に組み立て
+          RANGE_ARGS=""
+          if [ -n "$SD" ]; then RANGE_ARGS="$RANGE_ARGS --from $SD"; fi
+          if [ -n "$ED" ]; then RANGE_ARGS="$RANGE_ARGS --to $ED"; fi
+          if [ -n "$RANGE_ARGS" ]; then
+            echo "日付範囲:$RANGE_ARGS"
+          else
+            echo "日付範囲: なし (全期間)"
+          fi
+
+          # 処理対象の月別ファイルを決める
+          #  - start/end があれば その YYYYMM の範囲に該当する月だけ
+          #  - 無ければ 全月別ファイル
+          FILES=""
+          if [ -n "$SD" ] || [ -n "$ED" ]; then
+            SM="${SD:0:6}"
+            EM="${ED:0:6}"
+            for FP in $(ls "$MDIR"/keirin_*.jsonl 2>/dev/null); do
+              BASE=$(basename "$FP")            # keirin_YYYYMM.jsonl
+              YM=$(echo "$BASE" | sed -E 's/keirin_([0-9]{6})\.jsonl/\1/')
+              KEEP=1
+              if [ -n "$SM" ] && [ "$YM" \< "$SM" ]; then KEEP=0; fi
+              if [ -n "$EM" ] && [ "$YM" \> "$EM" ]; then KEEP=0; fi
+              if [ "$KEEP" = "1" ]; then FILES="$FILES $FP"; fi
+            done
+          else
+            FILES=$(ls "$MDIR"/keirin_*.jsonl 2>/dev/null)
+          fi
+
+          if [ -z "$FILES" ]; then
+            echo "対象月別ファイルがありません (範囲: $SD 〜 $ED)"; ls -la "$MDIR"; exit 1
+          fi
+
+          for FP in $FILES; do
+            echo "=================================================="
+            echo " 補完対象: $FP"
+            echo "=================================================="
+            KEIRIN_DB="$FP" KEIRIN_WORKERS=10 python backfill_shb_github_v3.py $RANGE_ARGS
+          done
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "S/H/B補完(月別): $(date +%Y%m%d_%H%M)"
+            git pull --rebase --autostash || true
+            git push
+          fi
