@@ -1,0 +1,99 @@
+name: SHB補完 本番DB直接 (日付範囲指定)
+
+# 本番DB keirin_data_scored_v2.jsonl に直接 S/H/B を補完し、
+# 月別ファイル keirin_months/ を更新する。
+# アプリは託宣ボタン押下時に sync_db_months で月別差分を自動取得するため、
+# このワークフロー実行後はアプリ側に自動反映される (手動マージ不要)。
+#
+# 使い方 (手動実行):
+#   start_date / end_date を指定するとその範囲だけ補完 (空欄=全期間)。
+#   既に S/B 補完済みのレコードは has_shb 判定でスキップされる。
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: '補完開始日 YYYYMMDD (空欄=制限なし)'
+        required: false
+        default: ''
+      end_date:
+        description: '補完終了日 YYYYMMDD (空欄=制限なし)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-shb-master
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 依存インストール
+        run: pip install requests
+
+      - name: 本番DBにS/H/B補完
+        run: |
+          # 本番DBの場所を特定 (リポジトリ直下 or takusen/data)
+          DB=""
+          if [ -f keirin_data_scored_v2.jsonl ]; then
+            DB="keirin_data_scored_v2.jsonl"
+          elif [ -f takusen/data/keirin_data_scored_v2.jsonl ]; then
+            DB="takusen/data/keirin_data_scored_v2.jsonl"
+          fi
+          if [ -z "$DB" ]; then
+            echo "本番DB keirin_data_scored_v2.jsonl が見つかりません"; ls -R | head -40; exit 1
+          fi
+          echo "対象DB: $DB"
+
+          # 日付範囲 (任意)
+          RANGE_ARGS=""
+          SD="${{ github.event.inputs.start_date }}"
+          ED="${{ github.event.inputs.end_date }}"
+          if [ -n "$SD" ]; then RANGE_ARGS="$RANGE_ARGS --from $SD"; fi
+          if [ -n "$ED" ]; then RANGE_ARGS="$RANGE_ARGS --to $ED"; fi
+          if [ -n "$RANGE_ARGS" ]; then
+            echo "日付範囲:$RANGE_ARGS"
+          else
+            echo "日付範囲: なし (全期間)"
+          fi
+
+          KEIRIN_DB="$DB" KEIRIN_WORKERS=10 python backfill_shb_github_v3.py $RANGE_ARGS
+
+      - name: 月別ファイルを更新 (split)
+        run: |
+          # split_monthly は cwd の keirin_data_scored_v2.jsonl を見るので、
+          # DBがリポジトリ直下にある前提。takusen/data 配置の場合はそこで実行。
+          if [ -f keirin_data_scored_v2.jsonl ]; then
+            python split_monthly_v1.py split
+          elif [ -f takusen/data/keirin_data_scored_v2.jsonl ]; then
+            cd takusen/data && python "$GITHUB_WORKSPACE/split_monthly_v1.py" split
+          fi
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "S/H/B補完(本番DB直接): $(date +%Y%m%d_%H%M)"
+            git pull --rebase --autostash || true
+            git push
+          fi
