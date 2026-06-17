@@ -15,6 +15,11 @@ v5からの変更点 (S/B付与):
     1度だけ解決してキャッシュし、各レースを並列取得する。
   - 取得失敗/未掲載のレースは s/h/b=None のまま (アプリ側は「-」表示)。
     SHB付与で例外が出ても本体の保存は必ず行う (付与は best-effort)。
+  - 「取得済み(全会場正常)」で早期skipする場合でも、既存キャッシュに
+    S/Bが未付与なら付与して保存し直す (races_already_has_shb で判定)。
+    朝の実行でS/B無しキャッシュが先に出来ても、後続実行で後付けされる。
+
+旧版からの変更点 (S/B付与・初版メモ):
 
 v3からの変更点 (ライン補完モード):
   - KEIRIN_LINE_HEAL=1 のとき、ライン情報が空の会場を再取得して補完
@@ -314,6 +319,22 @@ def apply_shb_to_races(all_races):
     return (applied, len(all_races))
 
 
+def races_already_has_shb(races):
+    """races の中に1つでも s/h/b キーを持つ選手がいれば True。
+    (付与済みキャッシュかどうかの判定。値がNoneでもキーがあれば付与済み扱い)"""
+    if not isinstance(races, list):
+        return False
+    for rec in races:
+        players = rec.get("players")
+        if not isinstance(players, dict):
+            continue
+        for bs in players:
+            pd = players[bs]
+            if isinstance(pd, dict) and ("s" in pd or "b" in pd or "h" in pd):
+                return True
+    return False
+
+
 def send_line(text):
     token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "").strip()
     user_id = os.environ.get("LINE_USER_ID", "").strip()
@@ -493,7 +514,23 @@ def main():
                 return
             weak = [pc for pc in by_pc if venue_is_weak(by_pc[pc])]
             if not weak:
-                print("[skip] 取得済み: " + str(len(races)) + "R (全会場正常)")
+                # 全会場正常。ただし既存キャッシュにS/B未付与なら付与して保存し直す。
+                if races_already_has_shb(races):
+                    print("[skip] 取得済み: " + str(len(races))
+                          + "R (全会場正常・S/B付与済み)")
+                    cleanup_old(tdt)
+                    return
+                print("[shb] 既存キャッシュにS/B未付与 → 後付けします ("
+                      + str(len(races)) + "R)")
+                applied, total = apply_shb_to_races(races)
+                if applied > 0:
+                    f = open(out_path, "w", encoding="utf-8")
+                    json.dump(races, f, ensure_ascii=False)
+                    f.close()
+                    print("[done] S/B後付け保存: " + str(applied) + "/"
+                          + str(total) + "R → " + out_path)
+                else:
+                    print("[shb] 付与0件 (winticket未掲載等)。現状維持")
                 cleanup_old(tdt)
                 return
             print("[heal] 少レース会場を再取得: "
