@@ -1,0 +1,422 @@
+{
+  "函館": {
+    "code": "11",
+    "bank_length": 400,
+    "minashi_chokusen": 51.3,
+    "cant_degree": 30.61,
+    "width_home": 10.8,
+    "width_back": 9.8,
+    "width_center": 7.8,
+    "is_dome": false
+  },
+  "青森": {
+    "code": "12",
+    "bank_length": 400,
+    "minashi_chokusen": 58.9,
+    "cant_degree": 32.25,
+    "width_home": 10.8,
+    "width_back": 9.8,
+    "width_center": 7.8,
+    "is_dome": false
+  },
+  "いわき平": {
+    "code": "13",
+    "bank_length": 400,
+    "minashi_chokusen": 62.7,
+    "cant_degree": 32.91,
+    "width_home": 10.0,
+    "width_back": 10.0,
+    "width_center": 7.3,
+    "is_dome": false
+  },
+  "弥彦": {
+    "code": "21",
+    "bank_length": 400,
+    "minashi_chokusen": 63.1,
+    "cant_degree": 32.41,
+    "width_home": 10.1,
+    "width_back": 9.0,
+    "width_center": 7.3,
+    "is_dome": false
+  },
+  "前橋": {
+    "code": "22",
+    "bank_length": 335,
+    "minashi_chokusen": 46.7,
+    "cant_degree": 36.0,
+    "width_home": 9.9,
+    "width_back": 9.9,
+    "width_center": 9.9,
+    "is_dome": true
+  },
+  "取手": {
+    "code": "23",
+    "bank_length": 400,
+    "minashi_chokusen": 54.8,
+    "cant_degree": 31.51,
+    "width_home": 10.0,
+    "width_back": 10.0,
+    "width_center": 7.5,
+    "is_dome": false
+  },
+  "宇都宮": {
+    "code": "24",
+    "bank_length": 500,
+    "minashi_chokusen": 63.3,
+    "cant_degree": 25.8,
+    "width_home": 10.3,
+    "width_back": 11.3,
+    "width_center": 8.3,
+    "is_dome": false
+  },
+  "大宮": {
+    "code": "25",
+    "bank_length": 500,
+    "minashi_chokusen": 66.7,
+    "cant_degree": 26.28,
+    "width_home": 10.3,
+    "width_back": 9.3,
+    "width_center": 7.5,
+    "is_dome": false
+  },
+  "西武園": {
+    "code": "26",
+    "bank_length": 400,
+    "minashi_chokusen": 47.6,
+    "cant_degree": 29.45,
+    "width_home": 11.0,
+    "width_back": 10.0,
+    "width_center": 7.5,
+    "is_dome": false
+  },
+  "京王閣": {
+    "code": "27",
+    "bank_length": 400,
+    "minashi_chokusen": 51.5,
+    "cant_degree": 32.18,
+    "width_home": 10.3,
+    "width_back": 9.0,
+    "width_center": 7.5,
+    "is_dome": false
+  },
+  "立川": {
+    "code": "28",
+    "bank_length": 400,
+    "minashi_chokusen": 58.0,
+    "cant_degree": 31.22,
+    "width_home": 9.7,
+    "width_back": 8.7,
+    "width_center": 7.7,
+    "is_dome": false
+  },
+  "松戸": {
+    "code": "31",
+    "bank_length": 333,
+    "minashi_chokusen": 38.2,
+    "cant_degree": 29.75,
+    "width_home": 11.1,
+    "width_back": 9.6,
+    "width_center": 8.1,
+    "is_dome": false
+  },
+  "川崎": {
+    "code": "34",
+    "bank_length": 400,
+    "minashi_chokusen": 58.0,
+    "cant_degree": 32.17,
+    "width_home": 10.3,
+    "width_back": 9.3,
+    "width_center": 8.3,
+    "is_dome": false
+  },
+  "平塚": {
+    "code": "35",
+    "bank_length": 400,
+    "minashi_chokusen": 54.2,
+    "cant_degree": 31.48,
+    "width_home": 11.0,
+    "width_back": 9.3,
+    "width_center": 7.5,
+    "is_dome": false
+  },
+  "小田原": {
+    "code": "36",
+    "bank_length": 333,
+    "minashi_chokusen": 36.1,
+    "cant_degree": 35.57,
+    "width_home": 11.3,
+    "width_back": 9.0,
+    "width_center": 7.5,
+    "is_dome": false
+  },
+  "伊東": {
+    "code": "37",
+    "bank_length": 333,
+    "minashi_chokusen": 46.6,
+    "cant_degree": 34.69,
+    "width_home": 11.0,
+    "width_back": 9.3,
+    "width_center": 7.8,
+    "is_dome": false
+  },
+  "静岡": {
+    "code": "38",
+    "bank_length": 400,
+    "minashi_chokusen": 56.4,
+    "cant_degree": 30.72,
+    "width_home": 10.3,
+    "width_back": 9.3,
+    "width_center": 7.5,
+    "is_dome": false
+  },
+  "名古屋": {
+    "code": "42",
+    "bank_length": 400,
+    "minashi_chokusen": 58.8,
+    "cant_degree": 34.03,
+    "width_home": 10.3,
+    "width_back": 9.3,
+    "width_center": 7.3,
+    "is_dome": false
+  },
+  "岐阜": {
+    "code": "43",
+    "bank_length": 400,
+    "minashi_chokusen": 59.3,
+    "cant_degree": 32.25,
+    "width_home": 10.2,
+    "width_back": 9.0,
+    "width_center": 7.4,
+    "is_dome": false
+  },
+  "大垣": {
+    "code": "44",
+    "bank_length": 400,
+    "minashi_chokusen": 56.0,
+    "cant_degree": 30.62,
+    "width_home": 10.2,
+    "width_back": 9.0,
+    "width_center": 7.4,
+    "is_dome": false
+  },
+  "豊橋": {
+    "code": "45",
+    "bank_length": 400,
+    "minashi_chokusen": 60.3,
+    "cant_degree": 33.84,
+    "width_home": 10.3,
+    "width_back": 9.3,
+    "width_center": 7.8,
+    "is_dome": false
+  },
+  "富山": {
+    "code": "46",
+    "bank_length": 333,
+    "minashi_chokusen": 43.0,
+    "cant_degree": 33.69,
+    "width_home": 10.2,
+    "width_back": 9.2,
+    "width_center": 6.4,
+    "is_dome": false
+  },
+  "松阪": {
+    "code": "47",
+    "bank_length": 400,
+    "minashi_chokusen": 61.5,
+    "cant_degree": 34.42,
+    "width_home": 10.9,
+    "width_back": 9.0,
+    "width_center": 7.7,
+    "is_dome": false
+  },
+  "四日市": {
+    "code": "48",
+    "bank_length": 400,
+    "minashi_chokusen": 62.4,
+    "cant_degree": 32.25,
+    "width_home": 13.3,
+    "width_back": 11.5,
+    "width_center": 8.5,
+    "is_dome": false
+  },
+  "福井": {
+    "code": "51",
+    "bank_length": 400,
+    "minashi_chokusen": 52.8,
+    "cant_degree": 31.48,
+    "width_home": 10.5,
+    "width_back": 9.0,
+    "width_center": 7.5,
+    "is_dome": false
+  },
+  "奈良": {
+    "code": "53",
+    "bank_length": 333,
+    "minashi_chokusen": 38.0,
+    "cant_degree": 33.43,
+    "width_home": 10.8,
+    "width_back": 7.8,
+    "width_center": 7.8,
+    "is_dome": false
+  },
+  "向日町": {
+    "code": "54",
+    "bank_length": 400,
+    "minashi_chokusen": 47.3,
+    "cant_degree": 30.48,
+    "width_home": 10.3,
+    "width_back": 9.3,
+    "width_center": 7.6,
+    "is_dome": false
+  },
+  "和歌山": {
+    "code": "55",
+    "bank_length": 400,
+    "minashi_chokusen": 59.9,
+    "cant_degree": 32.25,
+    "width_home": 11.4,
+    "width_back": 9.3,
+    "width_center": 7.7,
+    "is_dome": false
+  },
+  "岸和田": {
+    "code": "56",
+    "bank_length": 400,
+    "minashi_chokusen": 56.7,
+    "cant_degree": 30.93,
+    "width_home": 10.2,
+    "width_back": 10.1,
+    "width_center": 7.3,
+    "is_dome": false
+  },
+  "玉野": {
+    "code": "61",
+    "bank_length": 400,
+    "minashi_chokusen": 47.9,
+    "cant_degree": 30.63,
+    "width_home": 10.3,
+    "width_back": 9.3,
+    "width_center": 7.5,
+    "is_dome": false
+  },
+  "広島": {
+    "code": "62",
+    "bank_length": 400,
+    "minashi_chokusen": 57.9,
+    "cant_degree": 32.53,
+    "width_home": 10.5,
+    "width_back": 8.5,
+    "width_center": 7.3,
+    "is_dome": false
+  },
+  "防府": {
+    "code": "63",
+    "bank_length": 333,
+    "minashi_chokusen": 42.5,
+    "cant_degree": 34.69,
+    "width_home": 10.2,
+    "width_back": 9.1,
+    "width_center": 7.4,
+    "is_dome": false
+  },
+  "高松": {
+    "code": "71",
+    "bank_length": 400,
+    "minashi_chokusen": 54.8,
+    "cant_degree": 33.26,
+    "width_home": 11.0,
+    "width_back": 9.0,
+    "width_center": 8.0,
+    "is_dome": false
+  },
+  "小松島": {
+    "code": "73",
+    "bank_length": 400,
+    "minashi_chokusen": 55.5,
+    "cant_degree": 29.77,
+    "width_home": 10.3,
+    "width_back": 9.3,
+    "width_center": 8.3,
+    "is_dome": false
+  },
+  "高知": {
+    "code": "74",
+    "bank_length": 500,
+    "minashi_chokusen": 52.0,
+    "cant_degree": 24.5,
+    "width_home": 11.3,
+    "width_back": 10.8,
+    "width_center": 7.8,
+    "is_dome": false
+  },
+  "松山": {
+    "code": "75",
+    "bank_length": 400,
+    "minashi_chokusen": 58.6,
+    "cant_degree": 34.03,
+    "width_home": 10.3,
+    "width_back": 9.3,
+    "width_center": 7.3,
+    "is_dome": false
+  },
+  "小倉": {
+    "code": "81",
+    "bank_length": 400,
+    "minashi_chokusen": 56.9,
+    "cant_degree": 34.03,
+    "width_home": 11.0,
+    "width_back": 10.0,
+    "width_center": 8.0,
+    "is_dome": true
+  },
+  "久留米": {
+    "code": "83",
+    "bank_length": 400,
+    "minashi_chokusen": 50.7,
+    "cant_degree": 31.48,
+    "width_home": 11.0,
+    "width_back": 10.0,
+    "width_center": 9.0,
+    "is_dome": false
+  },
+  "武雄": {
+    "code": "84",
+    "bank_length": 400,
+    "minashi_chokusen": 64.4,
+    "cant_degree": 32.01,
+    "width_home": 9.7,
+    "width_back": 8.7,
+    "width_center": 7.4,
+    "is_dome": false
+  },
+  "佐世保": {
+    "code": "85",
+    "bank_length": 400,
+    "minashi_chokusen": 40.2,
+    "cant_degree": 31.48,
+    "width_home": 10.0,
+    "width_back": 9.0,
+    "width_center": 7.5,
+    "is_dome": false
+  },
+  "別府": {
+    "code": "86",
+    "bank_length": 400,
+    "minashi_chokusen": 59.9,
+    "cant_degree": 33.69,
+    "width_home": 10.0,
+    "width_back": 9.0,
+    "width_center": 8.0,
+    "is_dome": false
+  },
+  "熊本": {
+    "code": "87",
+    "bank_length": 400,
+    "minashi_chokusen": 60.3,
+    "cant_degree": 34.26,
+    "width_home": 10.0,
+    "width_back": 9.0,
+    "width_center": 8.0,
+    "is_dome": false
+  }
+}
