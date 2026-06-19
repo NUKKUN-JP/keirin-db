@@ -1,0 +1,346 @@
+{
+  "函館": {
+    "circumference": 400,
+    "straight_length": 51.3,
+    "cant_degree": 30.61,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "やや短い"
+  },
+  "青森": {
+    "circumference": 400,
+    "straight_length": 58.9,
+    "cant_degree": 32.25,
+    "circ_class": 400,
+    "cant_class": "標準",
+    "straight_class": "やや長い"
+  },
+  "いわき平": {
+    "circumference": 400,
+    "straight_length": 62.7,
+    "cant_degree": 32.92,
+    "circ_class": 400,
+    "cant_class": "ややキツイ",
+    "straight_class": "長い"
+  },
+  "弥彦": {
+    "circumference": 400,
+    "straight_length": 63.1,
+    "cant_degree": 32.4,
+    "circ_class": 400,
+    "cant_class": "標準",
+    "straight_class": "長い"
+  },
+  "前橋": {
+    "circumference": 335,
+    "straight_length": 46.7,
+    "cant_degree": 36.0,
+    "circ_class": 333,
+    "cant_class": "キツイ",
+    "straight_class": "短い"
+  },
+  "取手": {
+    "circumference": 400,
+    "straight_length": 54.8,
+    "cant_degree": 31.51,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "標準"
+  },
+  "宇都宮": {
+    "circumference": 500,
+    "straight_length": 63.3,
+    "cant_degree": 25.8,
+    "circ_class": 500,
+    "cant_class": "緩い",
+    "straight_class": "長い"
+  },
+  "大宮": {
+    "circumference": 500,
+    "straight_length": 66.7,
+    "cant_degree": 26.28,
+    "circ_class": 500,
+    "cant_class": "緩い",
+    "straight_class": "長い"
+  },
+  "西武園": {
+    "circumference": 400,
+    "straight_length": 47.6,
+    "cant_degree": 29.45,
+    "circ_class": 400,
+    "cant_class": "緩い",
+    "straight_class": "やや短い"
+  },
+  "京王閣": {
+    "circumference": 400,
+    "straight_length": 51.5,
+    "cant_degree": 32.18,
+    "circ_class": 400,
+    "cant_class": "標準",
+    "straight_class": "やや短い"
+  },
+  "立川": {
+    "circumference": 400,
+    "straight_length": 58.0,
+    "cant_degree": 31.22,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "やや長い"
+  },
+  "松戸": {
+    "circumference": 333,
+    "straight_length": 38.2,
+    "cant_degree": 29.74,
+    "circ_class": 333,
+    "cant_class": "緩い",
+    "straight_class": "短い"
+  },
+  "川崎": {
+    "circumference": 400,
+    "straight_length": 58.0,
+    "cant_degree": 32.17,
+    "circ_class": 400,
+    "cant_class": "標準",
+    "straight_class": "やや長い"
+  },
+  "平塚": {
+    "circumference": 400,
+    "straight_length": 54.2,
+    "cant_degree": 31.64,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "やや短い"
+  },
+  "小田原": {
+    "circumference": 333,
+    "straight_length": 36.1,
+    "cant_degree": 35.57,
+    "circ_class": 333,
+    "cant_class": "キツイ",
+    "straight_class": "短い"
+  },
+  "伊東": {
+    "circumference": 333,
+    "straight_length": 46.6,
+    "cant_degree": 34.69,
+    "circ_class": 333,
+    "cant_class": "キツイ",
+    "straight_class": "短い"
+  },
+  "伊東温泉": {
+    "circumference": 333,
+    "straight_length": 46.6,
+    "cant_degree": 34.69,
+    "circ_class": 333,
+    "cant_class": "キツイ",
+    "straight_class": "短い"
+  },
+  "静岡": {
+    "circumference": 400,
+    "straight_length": 56.4,
+    "cant_degree": 30.72,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "標準"
+  },
+  "名古屋": {
+    "circumference": 400,
+    "straight_length": 58.8,
+    "cant_degree": 34.03,
+    "circ_class": 400,
+    "cant_class": "キツイ",
+    "straight_class": "やや長い"
+  },
+  "岐阜": {
+    "circumference": 400,
+    "straight_length": 59.3,
+    "cant_degree": 33.25,
+    "circ_class": 400,
+    "cant_class": "ややキツイ",
+    "straight_class": "やや長い"
+  },
+  "大垣": {
+    "circumference": 400,
+    "straight_length": 56.0,
+    "cant_degree": 30.62,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "標準"
+  },
+  "豊橋": {
+    "circumference": 400,
+    "straight_length": 60.3,
+    "cant_degree": 33.84,
+    "circ_class": 400,
+    "cant_class": "ややキツイ",
+    "straight_class": "長い"
+  },
+  "富山": {
+    "circumference": 333,
+    "straight_length": 43.0,
+    "cant_degree": 33.69,
+    "circ_class": 333,
+    "cant_class": "ややキツイ",
+    "straight_class": "短い"
+  },
+  "松阪": {
+    "circumference": 400,
+    "straight_length": 61.5,
+    "cant_degree": 34.42,
+    "circ_class": 400,
+    "cant_class": "キツイ",
+    "straight_class": "長い"
+  },
+  "四日市": {
+    "circumference": 400,
+    "straight_length": 62.4,
+    "cant_degree": 32.25,
+    "circ_class": 400,
+    "cant_class": "標準",
+    "straight_class": "長い"
+  },
+  "福井": {
+    "circumference": 400,
+    "straight_length": 52.8,
+    "cant_degree": 31.48,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "やや短い"
+  },
+  "奈良": {
+    "circumference": 333,
+    "straight_length": 38.0,
+    "cant_degree": 33.4,
+    "circ_class": 333,
+    "cant_class": "ややキツイ",
+    "straight_class": "短い"
+  },
+  "向日町": {
+    "circumference": 400,
+    "straight_length": 47.3,
+    "cant_degree": 30.49,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "短い"
+  },
+  "和歌山": {
+    "circumference": 400,
+    "straight_length": 59.9,
+    "cant_degree": 32.25,
+    "circ_class": 400,
+    "cant_class": "標準",
+    "straight_class": "長い"
+  },
+  "岸和田": {
+    "circumference": 400,
+    "straight_length": 56.7,
+    "cant_degree": 30.93,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "標準"
+  },
+  "玉野": {
+    "circumference": 400,
+    "straight_length": 47.9,
+    "cant_degree": 30.63,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "やや短い"
+  },
+  "広島": {
+    "circumference": 400,
+    "straight_length": 57.9,
+    "cant_degree": 32.53,
+    "circ_class": 400,
+    "cant_class": "標準",
+    "straight_class": "やや長い"
+  },
+  "防府": {
+    "circumference": 333,
+    "straight_length": 42.5,
+    "cant_degree": 34.69,
+    "circ_class": 333,
+    "cant_class": "キツイ",
+    "straight_class": "短い"
+  },
+  "高松": {
+    "circumference": 400,
+    "straight_length": 54.8,
+    "cant_degree": 33.26,
+    "circ_class": 400,
+    "cant_class": "ややキツイ",
+    "straight_class": "標準"
+  },
+  "小松島": {
+    "circumference": 400,
+    "straight_length": 55.5,
+    "cant_degree": 29.77,
+    "circ_class": 400,
+    "cant_class": "緩い",
+    "straight_class": "標準"
+  },
+  "高知": {
+    "circumference": 500,
+    "straight_length": 52.0,
+    "cant_degree": 24.5,
+    "circ_class": 500,
+    "cant_class": "緩い",
+    "straight_class": "やや短い"
+  },
+  "松山": {
+    "circumference": 400,
+    "straight_length": 58.6,
+    "cant_degree": 34.03,
+    "circ_class": 400,
+    "cant_class": "キツイ",
+    "straight_class": "やや長い"
+  },
+  "小倉": {
+    "circumference": 400,
+    "straight_length": 56.9,
+    "cant_degree": 34.03,
+    "circ_class": 400,
+    "cant_class": "キツイ",
+    "straight_class": "標準"
+  },
+  "久留米": {
+    "circumference": 400,
+    "straight_length": 50.7,
+    "cant_degree": 31.48,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "やや短い"
+  },
+  "武雄": {
+    "circumference": 400,
+    "straight_length": 64.4,
+    "cant_degree": 32.01,
+    "circ_class": 400,
+    "cant_class": "標準",
+    "straight_class": "長い"
+  },
+  "佐世保": {
+    "circumference": 400,
+    "straight_length": 40.2,
+    "cant_degree": 31.48,
+    "circ_class": 400,
+    "cant_class": "やや緩い",
+    "straight_class": "短い"
+  },
+  "別府": {
+    "circumference": 400,
+    "straight_length": 59.9,
+    "cant_degree": 33.69,
+    "circ_class": 400,
+    "cant_class": "ややキツイ",
+    "straight_class": "長い"
+  },
+  "熊本": {
+    "circumference": 400,
+    "straight_length": 60.3,
+    "cant_degree": 34.26,
+    "circ_class": 400,
+    "cant_class": "キツイ",
+    "straight_class": "長い"
+  }
+}
