@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-06-30 07:12:01",
+  "generated_at": "2026-07-01 07:19:00",
   "source_db": "/home/runner/work/keirin-db/keirin-db/takusen/data/keirin_data_scored_v2.jsonl",
   "definition": "周長×カント×直線×風向×風速 + 決まり手連動カテゴリ 7パターン",
   "scenes": [
