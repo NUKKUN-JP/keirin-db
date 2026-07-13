@@ -1,0 +1,105 @@
+name: 2車単オッズ収集 当日分
+
+# today_cache/races_YYYYMMDD.json (当日出走表) を入力に、gambooから2車単オッズを
+# 取得して odds_cache/YYYYMMDD.jsonl に保存する。
+# 確定ロジック検証(人気薄判定・回収率)用のオッズをGitHub上で日々蓄積する。
+#
+# 実行タイミング: cathedral_today より後(当日出走表が揃った後)。
+#   締切直前ほどオッズが確定するため、レース時間帯にも複数回実行する。
+#   ※過去日のオッズは gamboo 側で数日で失効するため、当日〜翌日に取るのが要。
+
+on:
+  schedule:
+    # 既存ワークフロー(today_basic 6:00-6:30 / daily_update 毎時17分)と
+    # プッシュ衝突しない時刻に配置。衝突しても pull --rebase で安全だが無駄を減らす。
+    - cron: '45 22 * * *'   # JST 07:45 (today_basic後)
+    - cron: '40 2 * * *'    # JST 11:40 (daily_update 11:17後)
+    - cron: '40 4 * * *'    # JST 13:40 (today_basic 14:05前)
+    - cron: '40 7 * * *'    # JST 16:40 (夕方の確定オッズ回収)
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '対象日 YYYYMMDD (空欄=当日)'
+        required: false
+        default: ''
+      start_date:
+        description: '範囲開始 YYYYMMDD (範囲収集する場合)'
+        required: false
+        default: ''
+      end_date:
+        description: '範囲終了 YYYYMMDD (範囲収集する場合)'
+        required: false
+        default: ''
+      force:
+        description: '既存キャッシュも再取得 (1でON)'
+        required: false
+        default: '0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-fetch-odds
+  cancel-in-progress: false
+
+jobs:
+  fetch_odds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリインストール
+        run: pip install -r requirements.txt
+
+      - name: オッズ収集
+        env:
+          ODDS_START_DATE: ${{ github.event.inputs.start_date }}
+          ODDS_END_DATE: ${{ github.event.inputs.end_date }}
+          ODDS_FORCE: ${{ github.event.inputs.force }}
+          ODDS_ROSTER_DIR: today_cache
+          ODDS_OUT_DIR: odds_cache
+        run: |
+          # 範囲指定(手動)があればそのまま範囲収集。
+          if [ -n "${{ github.event.inputs.start_date }}" ]; then
+            echo "範囲収集: ${{ github.event.inputs.start_date }} - ${{ github.event.inputs.end_date }}"
+            python fetch_odds_cache.py
+            exit 0
+          fi
+          # 通常(自動)は当日分。cathedral_today と同じく roster の存在を先に確認。
+          DATE_IN="${{ github.event.inputs.date }}"
+          if [ -z "$DATE_IN" ]; then
+            DATE_IN=$(date +%Y%m%d)
+          fi
+          TODAY_JSON="today_cache/races_${DATE_IN}.json"
+          echo "対象: $TODAY_JSON"
+          if [ ! -f "$TODAY_JSON" ]; then
+            echo "::warning::$TODAY_JSON が無い。today_basic 未完了の可能性。スキップ"
+            exit 0
+          fi
+          # 対象ファイルを直接指定(cathedral_today と同方式)
+          ODDS_DATE="$DATE_IN" ODDS_ROSTER_JSON="$TODAY_JSON" python fetch_odds_cache.py
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -d odds_cache ]; then
+            git add -A odds_cache/
+          fi
+          if git diff --cached --quiet; then
+            echo "変更なし、コミットスキップ"
+          else
+            git commit -m "2車単オッズ収集: $(date +%Y%m%d_%H%M)"
+            git pull --rebase --autostash || true
+            git push || { echo "::warning::push失敗。次回実行が回収"; exit 0; }
+          fi
