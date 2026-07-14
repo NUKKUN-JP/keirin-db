@@ -1,0 +1,94 @@
+name: グレード補填
+
+# 2022-2024 の grade/race_kind/day_label/series_name 欠損を gamboo から補填。
+# 1回の実行で「収集→DB適用→月別split→コミット」まで完結する。
+# 既存 daily_update.yml と同じ枠組み (split_monthly rebuild/split)。
+#
+# 使い方: Run workflow で start_date / end_date を月〜年単位で指定するだけ。
+#   例) 20220101 〜 20221231 を実行 → その範囲のgradeが埋まってコミットされる。
+#   量が多くtimeoutする場合は範囲を狭めて複数回。grade_fills.jsonl に
+#   蓄積されるので、再実行は続きから(取得済みはスキップ)。
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: '補填開始 YYYYMMDD'
+        required: false
+        default: '20220101'
+      end_date:
+        description: '補填終了 YYYYMMDD'
+        required: false
+        default: '20221231'
+      limit:
+        description: '1回の取得上限件数 (0=無制限)'
+        required: false
+        default: '0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-grade-backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリインストール
+        run: pip install -r requirements.txt
+
+      - name: 月別ファイルから一体型DBを再構築
+        run: python split_monthly_v1.py rebuild
+
+      - name: 補填 (収集→DB適用まで一括)
+        env:
+          GB_START: ${{ github.event.inputs.start_date }}
+          GB_END: ${{ github.event.inputs.end_date }}
+          GB_LIMIT: ${{ github.event.inputs.limit }}
+          GB_FILLS: grade_fills.jsonl
+        run: python backfill_grade_v2.py
+
+      - name: 一体型DBを月別ファイルに分割
+        if: always()
+        run: python split_monthly_v1.py split
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # 一体型DBは成果物ではない(ランナー内の作業用)。追跡外にして
+          # rebase を邪魔する未ステージ変更にならないよう物理削除する。
+          git rm --cached keirin_data_scored_v2.jsonl 2>/dev/null || true
+          rm -f keirin_data_scored_v2.jsonl
+          if [ -d keirin_months ]; then
+            git add -A keirin_months/
+          fi
+          if [ -f grade_fills.jsonl ]; then
+            git add grade_fills.jsonl
+          fi
+          if git diff --cached --quiet; then
+            echo "変更なし、コミットスキップ"
+          else
+            git commit -m "グレード補填: $(date +%Y%m%d_%H%M)"
+            # --autostash: 残った未ステージ変更を自動退避してrebaseを通す
+            if ! git pull --rebase --autostash; then
+              git rebase --abort || true
+              echo "::warning::衝突のため今回の成果は破棄。再実行で回収(grade_fills は次回も利用)"
+              exit 0
+            fi
+            git push || { echo "::warning::push失敗。再実行で回収"; exit 0; }
+          fi
