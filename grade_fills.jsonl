@@ -12537,3 +12537,1584 @@
 {"race_id": "752024060902", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
 {"race_id": "752024060903", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
 {"race_id": "752024060904", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "752024060905", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "752024060906", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "752024060907", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "752024060908", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "752024060909", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "122024061001", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061002", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061003", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061004", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061005", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061006", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061007", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061008", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061009", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "242024061001", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "第２７回とちぎテレビ杯"}
+{"race_id": "242024061002", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "第２７回とちぎテレビ杯"}
+{"race_id": "242024061003", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "第２７回とちぎテレビ杯"}
+{"race_id": "242024061004", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "第２７回とちぎテレビ杯"}
+{"race_id": "242024061005", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "第２７回とちぎテレビ杯"}
+{"race_id": "242024061006", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "第２７回とちぎテレビ杯"}
+{"race_id": "242024061007", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "第２７回とちぎテレビ杯"}
+{"race_id": "252024061001", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061002", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061003", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061004", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061005", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061006", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061007", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061008", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061009", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061010", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061011", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "252024061012", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツニッポン新聞社杯"}
+{"race_id": "312024061001", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061002", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061003", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061004", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061005", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061006", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061007", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061008", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061009", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061010", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061011", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061012", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "712024061001", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061002", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061003", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061004", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061005", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061006", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061007", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "832024061001", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061002", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061003", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061004", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061005", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061006", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061007", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061008", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061009", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "122024061101", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "122024061102", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "122024061103", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "122024061104", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "122024061105", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "122024061106", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "122024061107", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "122024061108", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "122024061109", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "312024061101", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061102", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061103", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061104", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061105", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061106", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061107", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061108", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061109", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061110", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061111", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061112", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "482024061101", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061102", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061103", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061104", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061105", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061106", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061107", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061108", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061109", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061110", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061111", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061112", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "562024061101", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061102", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061103", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061104", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061105", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061106", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061107", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061108", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061109", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061110", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061111", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061112", "grade": "G1", "race_kind": "", "day_label": "初日", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "712024061101", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061102", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061103", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061104", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061105", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061106", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061107", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "832024061101", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061102", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061103", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061104", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061105", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061106", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061107", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061108", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061109", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "122024061201", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061202", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061203", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061204", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061205", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061206", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061207", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061208", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "122024061209", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "312024061201", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061202", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061203", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061204", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061205", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061206", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061207", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061208", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061209", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061210", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061211", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "312024061212", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第２２回チャリロト松戸杯"}
+{"race_id": "482024061201", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061202", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061203", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061204", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061205", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061206", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061207", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061208", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061209", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061210", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061211", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061212", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "562024061201", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061202", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061203", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061204", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061205", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061206", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061207", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061208", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061209", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061210", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061211", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061212", "grade": "G1", "race_kind": "", "day_label": "2日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "712024061201", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061202", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061203", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061204", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061205", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061206", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "712024061207", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "リンカイ！広島恋未杯"}
+{"race_id": "832024061201", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061202", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061203", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061204", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061205", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061206", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061207", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061208", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024061209", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "282024061301", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061302", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061303", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061304", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061305", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061306", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061307", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "342024061301", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061302", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061303", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061304", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061305", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061306", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061307", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061308", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061309", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "432024061301", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061302", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061303", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061304", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061305", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061306", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061307", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061308", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061309", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "482024061301", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061302", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061303", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061304", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061305", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061306", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061307", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061308", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061309", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061310", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061311", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "482024061312", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "能支　ゆうゆう会館協賛　中スポ"}
+{"race_id": "562024061301", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061302", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061303", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061304", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061305", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061306", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061307", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061308", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061309", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061310", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061311", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061312", "grade": "G1", "race_kind": "", "day_label": "3日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "212024061401", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061402", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061403", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061404", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061405", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061406", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061407", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061408", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061409", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061410", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061411", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061412", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "日刊スポーツ賞"}
+{"race_id": "282024061401", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061402", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061403", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061404", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061405", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061406", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061407", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "342024061401", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061402", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061403", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061404", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061405", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061406", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061407", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061408", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061409", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "432024061401", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061402", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061403", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061404", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061405", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061406", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061407", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061408", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061409", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "562024061401", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061402", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061403", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061404", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061405", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061406", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061407", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061408", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061409", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061410", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061411", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "562024061412", "grade": "G1", "race_kind": "", "day_label": "4日目", "series_name": "能支・万協 高松宮記念杯競輪 パールカップ"}
+{"race_id": "612024061401", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061402", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061403", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061404", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061405", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061406", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061407", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061408", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061409", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061410", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061411", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061412", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "212024061501", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061502", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061503", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061504", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061505", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061506", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061507", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061508", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061509", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061510", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061511", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061512", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "日刊スポーツ賞"}
+{"race_id": "262024061501", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061502", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061503", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061504", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061505", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061506", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061507", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061508", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061509", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061510", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061511", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061512", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "東京スポーツ杯"}
+{"race_id": "282024061501", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061502", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061503", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061504", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061505", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061506", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "282024061507", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京中日スポーツ杯モーニング７"}
+{"race_id": "342024061501", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061502", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061503", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061504", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061505", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061506", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061507", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061508", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "342024061509", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケミッドナイト競輪"}
+{"race_id": "432024061501", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061502", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061503", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061504", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061505", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061506", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061507", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061508", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "432024061509", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "Ｋドリームス杯ガールズケイリン"}
+{"race_id": "612024061501", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061502", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061503", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061504", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061505", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061506", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061507", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061508", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061509", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061510", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061511", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061512", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "752024061501", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061502", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061503", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061504", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061505", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061506", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061507", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "132024061601", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061602", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061603", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061604", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061605", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061606", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061607", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "212024061601", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061602", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061603", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061604", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061605", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061606", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061607", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061608", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061609", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061610", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061611", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "212024061612", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "日刊スポーツ賞"}
+{"race_id": "262024061601", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061602", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061603", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061604", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061605", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061606", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061607", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061608", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061609", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061610", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061611", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061612", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "東京スポーツ杯"}
+{"race_id": "612024061601", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061602", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061603", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061604", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061605", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061606", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061607", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061608", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061609", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061610", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061611", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "612024061612", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "両備バス杯＆ＣＴＣ杯"}
+{"race_id": "752024061601", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061602", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061603", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061604", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061605", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061606", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061607", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "812024061601", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061602", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061603", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061604", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061605", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061606", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061607", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "132024061701", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061702", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061703", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061704", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061705", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061706", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061707", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "262024061701", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061702", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061703", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061704", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061705", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061706", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061707", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061708", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061709", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061710", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061711", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "262024061712", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "東京スポーツ杯"}
+{"race_id": "372024061701", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061702", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061703", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061704", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061705", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061706", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061707", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061708", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061709", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061710", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061711", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061712", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "442024061701", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061702", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061703", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061704", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061705", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061706", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061707", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061708", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061709", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061710", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061711", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061712", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "752024061701", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061702", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061703", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061704", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061705", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061706", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "752024061707", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "四国東通杯争奪戦ｉｎ松山"}
+{"race_id": "812024061701", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061702", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061703", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061704", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061705", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061706", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "852024061701", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061702", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061703", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061704", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061705", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061706", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061707", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061708", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061709", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061710", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061711", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061712", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "132024061801", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061802", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061803", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061804", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061805", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061806", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "132024061807", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "372024061801", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061802", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061803", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061804", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061805", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061806", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061807", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061808", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061809", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061810", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061811", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061812", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "炭の家・三和建設杯"}
+{"race_id": "442024061801", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061802", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061803", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061804", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061805", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061806", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061807", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061808", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061809", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061810", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061811", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061812", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "812024061801", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061802", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061803", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061804", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061805", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024061806", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "852024061801", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061802", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061803", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061804", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061805", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061806", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061807", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061808", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061809", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061810", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061811", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061812", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "862024061801", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061802", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061803", "grade": "F2", "race_kind": "レース", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061804", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061805", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061806", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061807", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "122024061901", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061902", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061903", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061904", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061905", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061906", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061907", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061908", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061909", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061910", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061911", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024061912", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "スポーツ報知杯"}
+{"race_id": "212024061901", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061902", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061903", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061904", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061905", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061906", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061907", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061908", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061909", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061910", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061911", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024061912", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ賞"}
+{"race_id": "222024061901", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024061902", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024061903", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024061904", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024061905", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024061906", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024061907", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024061908", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024061909", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "362024061901", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024061902", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024061903", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024061904", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024061905", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024061906", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024061907", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "372024061901", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061902", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061903", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061904", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061905", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061906", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061907", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061908", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061909", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061910", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061911", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "372024061912", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "炭の家・三和建設杯"}
+{"race_id": "442024061901", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061902", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061903", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061904", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061905", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061906", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061907", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061908", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061909", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061910", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061911", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "442024061912", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "コロナワールド賞・ＣＴＣ杯"}
+{"race_id": "472024061901", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024061902", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024061903", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024061904", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024061905", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024061906", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024061907", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024061908", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024061909", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "512024061901", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061902", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061903", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061904", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061905", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061906", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061907", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061908", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061909", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061910", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061911", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024061912", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "852024061901", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061902", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061903", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061904", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061905", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061906", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061907", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061908", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061909", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061910", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061911", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "852024061912", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スピードチャンネル・スカパー杯"}
+{"race_id": "862024061901", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061902", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061903", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061904", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061905", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061906", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024061907", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "122024062001", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062002", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062003", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062004", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062005", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062006", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062007", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062008", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062009", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062010", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062011", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062012", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "スポーツ報知杯"}
+{"race_id": "212024062001", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062002", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062003", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062004", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062005", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062006", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062007", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062008", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062009", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062010", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062011", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062012", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ賞"}
+{"race_id": "222024062001", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062002", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062003", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062004", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062005", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062006", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062007", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062008", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062009", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "362024062001", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062002", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062003", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062004", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062005", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062006", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062007", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "472024062001", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062002", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062003", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062004", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062005", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062006", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062007", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062008", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062009", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "482024062001", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062002", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062003", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062004", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062005", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062006", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062007", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062008", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062009", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062010", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062011", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062012", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "512024062001", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062002", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062003", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062004", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062005", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062006", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062007", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062008", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062009", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062010", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062011", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062012", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "712024062001", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062002", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062003", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062004", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062005", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062006", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062007", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062008", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062009", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062010", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062011", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062012", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "862024062001", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024062002", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024062003", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024062004", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024062005", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024062006", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "862024062007", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "競輪公式投票ＣＴＣ杯"}
+{"race_id": "122024062101", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062102", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062103", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062104", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062105", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062106", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062107", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062108", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062109", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062110", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062111", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "122024062112", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "スポーツ報知杯"}
+{"race_id": "212024062101", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062102", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062103", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062104", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062105", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062106", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062107", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062108", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062109", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062110", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062111", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "212024062112", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ賞"}
+{"race_id": "222024062101", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062102", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062103", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062104", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062105", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062106", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062107", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062108", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "222024062109", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062101", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062102", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062103", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062104", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062105", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062106", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062107", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062108", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062109", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062110", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062111", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062112", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "362024062101", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062102", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062103", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062104", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062105", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062106", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "362024062107", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "モーニング７・トウチュウ杯"}
+{"race_id": "472024062101", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062102", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062103", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062104", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062105", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062106", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062107", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062108", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "472024062109", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト＆リンカイ！杯"}
+{"race_id": "482024062101", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062102", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062103", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062104", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062105", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062106", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062107", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062108", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062109", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062110", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062111", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062112", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ヤクルト東海カップ"}
+{"race_id": "512024062101", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062102", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062103", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062104", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062105", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062106", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062107", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062108", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062109", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062110", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062111", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "512024062112", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯争奪戦"}
+{"race_id": "712024062101", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062102", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062103", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062104", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062105", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062106", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062107", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062108", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062109", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062110", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062111", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062112", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "262024062201", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062202", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062203", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062204", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062205", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062206", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062207", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "272024062201", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062202", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062203", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062204", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062205", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062206", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062207", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062208", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062209", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062210", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062211", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062212", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "312024062201", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062202", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062203", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062204", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062205", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062206", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062207", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062208", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062209", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062210", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062211", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062212", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "372024062201", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062202", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062203", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062204", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062205", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062206", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062207", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062208", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062209", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "482024062201", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062202", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062203", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062204", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062205", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062206", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062207", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062208", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062209", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062210", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062211", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "482024062212", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ヤクルト東海カップ"}
+{"race_id": "712024062201", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062202", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062203", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062204", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062205", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062206", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062207", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062208", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062209", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062210", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062211", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "712024062212", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "高松盆栽杯＆ＣＴＣ杯"}
+{"race_id": "812024062201", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062202", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062203", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062204", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062205", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062206", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062207", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062208", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062209", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024062201", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062202", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062203", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062204", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062205", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062206", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062207", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062208", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062209", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062210", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062211", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062212", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "262024062301", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062302", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062303", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062304", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062305", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062306", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062307", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "272024062301", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062302", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062303", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062304", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062305", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062306", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062307", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062308", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062309", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062310", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062311", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062312", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "312024062301", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062302", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062303", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062304", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062305", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062306", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062307", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062308", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062309", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062310", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062311", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "312024062312", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "372024062301", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062302", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062303", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062304", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062305", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062306", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062307", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062308", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062309", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "552024062301", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062302", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062303", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062304", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062305", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062306", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062307", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "812024062301", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062302", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062303", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062304", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062305", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062306", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062307", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062308", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062309", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024062301", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062302", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062303", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062304", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062305", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062306", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062307", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062308", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062309", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062310", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062311", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062312", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "262024062401", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062402", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062403", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062404", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062405", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062406", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "262024062407", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ賞"}
+{"race_id": "272024062401", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062402", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062403", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062404", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062405", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062406", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062407", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062408", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062409", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062410", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062411", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "272024062412", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＯｄｄｓＶＳ！杯＆デイリー杯"}
+{"race_id": "362024062401", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062402", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062403", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062404", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062405", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062406", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062407", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062408", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062409", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062410", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062411", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062412", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "372024062401", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062402", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062403", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062404", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062405", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062406", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062407", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062408", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "372024062409", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "アニメリンカイ！見てね杯"}
+{"race_id": "452024062401", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062402", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062403", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062404", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062405", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062406", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062407", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062408", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062409", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062410", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062411", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062412", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＪＰＦ杯"}
+{"race_id": "552024062401", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062402", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062403", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062404", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062405", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062406", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062407", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "812024062401", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062402", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062403", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062404", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062405", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062406", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062407", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062408", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "812024062409", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "832024062401", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062402", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062403", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062404", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062405", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062406", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062407", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062408", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062409", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062410", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062411", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062412", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "212024062501", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062502", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062503", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062504", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062505", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062506", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062507", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "362024062501", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062502", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062503", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062504", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062505", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062506", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062507", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062508", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062509", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062510", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062511", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "452024062501", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062502", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062503", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062504", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062505", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062506", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062507", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062508", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062509", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062510", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062511", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062512", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＪＰＦ杯"}
+{"race_id": "532024062501", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062502", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062503", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062504", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062505", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062506", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062507", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "552024062501", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062502", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062503", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062504", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062505", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062506", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "552024062507", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "チャリロト杯モーニング７"}
+{"race_id": "832024062501", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062502", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062503", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062504", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062505", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062506", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062507", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062508", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062509", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062510", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062511", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "832024062512", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能支第３０回中野カップレース"}
+{"race_id": "862024062501", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062502", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062503", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062504", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062505", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062506", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062507", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "122024062601", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062602", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062603", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062604", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062605", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062606", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062607", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ニッカン・コム杯"}
+{"race_id": "212024062601", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "212024062602", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "212024062603", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "212024062604", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "212024062605", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "212024062606", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "212024062607", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "オッズパーク杯"}
+{"race_id": "362024062601", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062602", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062603", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062604", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062605", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062606", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062607", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062608", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062609", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "362024062610", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "サンケイスポーツ杯・ＣＴＣ杯"}
+{"race_id": "452024062601", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062602", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062603", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062604", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062605", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062606", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062607", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062608", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062609", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062610", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062611", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "452024062612", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "ＪＰＦ杯"}
+{"race_id": "532024062601", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062602", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062603", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062604", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062605", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062606", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "542024062601", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062602", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062603", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062604", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062605", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062606", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062607", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062608", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062609", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062610", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062611", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062612", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "732024062601", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062602", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062603", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062604", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062605", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062606", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062607", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062608", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062609", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062610", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062611", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062612", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "第３回チャリロト杯"}
+{"race_id": "812024062601", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062602", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062603", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062604", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062605", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062606", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062607", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062608", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062609", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062610", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062611", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062612", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "862024062601", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062602", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062603", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062604", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062605", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062606", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062607", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "122024062701", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062702", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062703", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062704", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062705", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062706", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062707", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ニッカン・コム杯"}
+{"race_id": "212024062701", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062702", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062703", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062704", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062705", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062706", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "212024062707", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "オッズパーク杯"}
+{"race_id": "232024062701", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062702", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062703", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062704", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062705", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062706", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062707", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062708", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062709", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062710", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062711", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062712", "grade": "G3", "race_kind": "", "day_label": "初日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "342024062701", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062702", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062703", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062704", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062705", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062706", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062707", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062708", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062709", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062710", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062711", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062712", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "532024062701", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062702", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062703", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062704", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062705", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "532024062706", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ＷＩＮＴＩＣＫＥＴ杯"}
+{"race_id": "542024062701", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062702", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062703", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062704", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062705", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062706", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062707", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062708", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062709", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062710", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062711", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062712", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "732024062701", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062702", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062703", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062704", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062705", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062706", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062707", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062708", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062709", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062710", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062711", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062712", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "第３回チャリロト杯"}
+{"race_id": "812024062701", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062702", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062703", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062704", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062705", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062706", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062707", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062708", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062709", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062710", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062711", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062712", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "842024062701", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062702", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062703", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062704", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062705", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062706", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062707", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062701", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062702", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062703", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062704", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062705", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062706", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "862024062707", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "122024062801", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062802", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062803", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062804", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062805", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062806", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ニッカン・コム杯"}
+{"race_id": "122024062807", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ニッカン・コム杯"}
+{"race_id": "232024062801", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062802", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062803", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062804", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062805", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062806", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062807", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062808", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062809", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062810", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062811", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062812", "grade": "G3", "race_kind": "", "day_label": "2日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "312024062801", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062802", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062803", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062804", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062805", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062806", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062807", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "342024062801", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062802", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062803", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062804", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062805", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062806", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062807", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062808", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062809", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062810", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062811", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062812", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "462024062801", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062802", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062803", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062804", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062805", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062806", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062807", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062808", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062809", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062810", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062811", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062812", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "542024062801", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062802", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062803", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062804", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062805", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062806", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062807", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062808", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062809", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062810", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062811", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "542024062812", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯　京紫陽花賞"}
+{"race_id": "562024062801", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062802", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062803", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062804", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062805", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062806", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062807", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "732024062801", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062802", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062803", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062804", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062805", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062806", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062807", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062808", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062809", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062810", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062811", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "732024062812", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "第３回チャリロト杯"}
+{"race_id": "752024062801", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062802", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062803", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062804", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062805", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062806", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062807", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "812024062801", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062802", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062803", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062804", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062805", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062806", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062807", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062808", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062809", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062810", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062811", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "812024062812", "grade": "F1", "race_kind": "", "day_label": "最終日", "series_name": "楽天Ｋドリームス杯"}
+{"race_id": "842024062801", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062802", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062803", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062804", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062805", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062806", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062807", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "132024062901", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062902", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062903", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062904", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062905", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062906", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062907", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062908", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062909", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062910", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062911", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024062912", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "232024062901", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062902", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062903", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062904", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062905", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062906", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062907", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062908", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062909", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062910", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062911", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024062912", "grade": "G3", "race_kind": "", "day_label": "3日目", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "312024062901", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062902", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062903", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062904", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062905", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062906", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024062907", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "342024062901", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062902", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062903", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062904", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062905", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062906", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062907", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062908", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062909", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062910", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062911", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "342024062912", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "トウチュウ杯争奪戦チャリロト杯"}
+{"race_id": "462024062901", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062902", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062903", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062904", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062905", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062906", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062907", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062908", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062909", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062910", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062911", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024062912", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "562024062901", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062902", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062903", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062904", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062905", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062906", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024062907", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "752024062901", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062902", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062903", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062904", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062905", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062906", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024062907", "grade": "F2", "race_kind": "", "day_label": "2日目", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "842024062901", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062902", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062903", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062904", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062905", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062906", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "842024062907", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "132024063001", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063002", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063003", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063004", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063005", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063006", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063007", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063008", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063009", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063010", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063011", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "132024063012", "grade": "F1", "race_kind": "", "day_label": "2日目", "series_name": "ＳあだたらＣ・スポーツ報知杯"}
+{"race_id": "232024063001", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063002", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063003", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063004", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063005", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063006", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063007", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063008", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063009", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063010", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063011", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "232024063012", "grade": "G3", "race_kind": "", "day_label": "最終日", "series_name": "能登半島支援　水戸黄門賞"}
+{"race_id": "312024063001", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024063002", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024063003", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024063004", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024063005", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024063006", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "312024063007", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ウィンチケットミッドナイト競輪"}
+{"race_id": "462024063001", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063002", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063003", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063004", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063005", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063006", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063007", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063008", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063009", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063010", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063011", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "462024063012", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "やっぱ！オズパ！杯"}
+{"race_id": "512024063001", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯"}
+{"race_id": "512024063002", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯"}
+{"race_id": "512024063003", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯"}
+{"race_id": "512024063004", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯"}
+{"race_id": "512024063005", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯"}
+{"race_id": "512024063006", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯"}
+{"race_id": "512024063007", "grade": "F2", "race_kind": "", "day_label": "初日", "series_name": "チャリロト杯"}
+{"race_id": "532024063001", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063002", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063003", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063004", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063005", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063006", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063007", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063008", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063009", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063010", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063011", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "532024063012", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "オッズパーク杯"}
+{"race_id": "562024063001", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024063002", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024063003", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024063004", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024063005", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024063006", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "562024063007", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "楽天ポイント使えるＫドリ杯"}
+{"race_id": "712024063001", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063002", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063003", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063004", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063005", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063006", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063007", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063008", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063009", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063010", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063011", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "712024063012", "grade": "F1", "race_kind": "", "day_label": "初日", "series_name": "屋島杯"}
+{"race_id": "752024063001", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024063002", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024063003", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024063004", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024063005", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024063006", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
+{"race_id": "752024063007", "grade": "F2", "race_kind": "", "day_label": "最終日", "series_name": "ｅーＳＨＩＮＢＵＮ杯争奪戦"}
