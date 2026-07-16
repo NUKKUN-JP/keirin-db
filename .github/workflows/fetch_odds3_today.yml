@@ -1,0 +1,117 @@
+name: 3連単オッズ収集
+
+# 3連単オッズを毎日収集し、月別分割(odds_months/YYYYMM.jsonl)でストック。
+# keirin_months と同じ分割管理なので、100MB制限に触れず実機同期にも乗せやすい。
+# 概算: 1レース約3KB → 1日200R=600KB → 月18MB
+#
+# 同一レースは最後に取得したオッズで上書き(締切直前が最も実用的)。
+# 過去オッズはgamboo側に数日しか残らないため、毎日確実に走らせることが重要。
+
+on:
+  schedule:
+    # JST 07:45 / 11:40 / 13:40 / 16:40 (UTC -9h)
+    - cron: '45 22 * * *'
+    - cron: '40 2 * * *'
+    - cron: '40 4 * * *'
+    - cron: '40 7 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '取得日 YYYYMMDD (空=当日JST)'
+        required: false
+        default: ''
+      start_date:
+        description: '範囲開始 YYYYMMDD (範囲取得時)'
+        required: false
+        default: ''
+      end_date:
+        description: '範囲終了 YYYYMMDD'
+        required: false
+        default: ''
+      force:
+        description: '既存も再取得 (1=する)'
+        required: false
+        default: '0'
+      sleep:
+        description: 'リクエスト間隔秒 (過去日大量取得は0.3〜0.5推奨)'
+        required: false
+        default: '0.5'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-fetch-odds3
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリインストール
+        run: pip install -r requirements.txt
+
+      - name: DBを月別分割から復元
+        run: |
+          # 過去日は出走表が残っていないので、DBからレース一覧を取る。
+          # keirin_months/ があればそれをそのまま使う(復元不要)。
+          if [ -d keirin_months ]; then
+            echo "keirin_months あり:"
+            ls -la keirin_months/ | head -12
+          else
+            echo "::warning::keirin_months が無い。過去日の取得はできません。"
+          fi
+
+      - name: 3連単オッズ取得
+        env:
+          OD_DATE: ${{ github.event.inputs.date }}
+          OD_START: ${{ github.event.inputs.start_date }}
+          OD_END: ${{ github.event.inputs.end_date }}
+          OD_ROSTER_DIR: today_cache
+          OD_DB_DIR: keirin_months
+          OD_OUT_DIR: odds_months
+          OD_FORCE: ${{ github.event.inputs.force }}
+          OD_SLEEP: ${{ github.event.inputs.sleep }}
+        run: python fetch_odds3_cache.py
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -d odds_months ]; then
+            git add -A odds_months/
+          fi
+          if git diff --cached --quiet; then
+            echo "変更なし、コミットスキップ"
+          else
+            git commit -m "3連単オッズ: $(date +%Y%m%d_%H%M)"
+            if ! git pull --rebase --autostash; then
+              git rebase --abort || true
+              echo "::warning::衝突のため今回の成果は破棄。次回で回収"
+              exit 0
+            fi
+            git push || { echo "::warning::push失敗。次回で回収"; exit 0; }
+          fi
+
+      - name: ストック状況
+        if: always()
+        run: |
+          if [ -d odds_months ]; then
+            echo "=== odds_months ==="
+            for f in odds_months/*.jsonl; do
+              [ -e "$f" ] || continue
+              echo "$f  $(wc -l < "$f") レース  $(du -h "$f" | cut -f1)"
+            done
+          fi
