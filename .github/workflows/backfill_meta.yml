@@ -1,0 +1,120 @@
+name: メタ補填 (grade/race_kind/day_label/series_name)
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: '開始日 YYYYMMDD (例 20240101)'
+        required: true
+        default: '20240101'
+      end_date:
+        description: '終了日 YYYYMMDD (例 20240331) ※3ヶ月刻み推奨'
+        required: true
+        default: '20240331'
+      redo_nokind:
+        description: 'race_kind が空のキャッシュを再取得する (1=する / 0=旧挙動)'
+        required: false
+        default: '1'
+      limit:
+        description: '処理件数の上限 (0=無制限、試運転なら100)'
+        required: false
+        default: '0'
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      TZ: Asia/Tokyo
+
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリインストール
+        run: pip install -r requirements.txt
+
+      - name: 月別ファイルから一体型DBを再構築
+        run: python split_monthly_v1.py rebuild
+
+      - name: 補填 (収集→DB適用まで一括)
+        env:
+          GB_START: ${{ github.event.inputs.start_date }}
+          GB_END: ${{ github.event.inputs.end_date }}
+          GB_LIMIT: ${{ github.event.inputs.limit }}
+          GB_REDO: ${{ github.event.inputs.redo_nokind }}
+          GB_FILLS: grade_fills.jsonl
+        run: python backfill_meta_v3.py
+
+      - name: 一体型DBを月別ファイルに分割
+        run: python split_monthly_v1.py split
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # 一体型DBは成果物ではない(ランナー内の作業用・445MBでGitHubに載らない)。
+          # 追跡外にして rebase を邪魔する未ステージ変更にならないよう物理削除する。
+          git rm --cached keirin_data_scored_v2.jsonl 2>/dev/null || true
+          rm -f keirin_data_scored_v2.jsonl
+          if [ -d keirin_months ]; then
+            git add -A keirin_months/
+          fi
+          if [ -f grade_fills.jsonl ]; then
+            git add grade_fills.jsonl
+          fi
+          if git diff --cached --quiet; then
+            echo "変更なし、コミットスキップ"
+          else
+            git commit -m "メタ補填: $(date +%Y%m%d_%H%M)"
+            # --autostash: 残った未ステージ変更を自動退避してrebaseを通す
+            if ! git pull --rebase --autostash; then
+              git rebase --abort || true
+              echo "::warning::衝突のため今回の成果は破棄。再実行で回収(grade_fills は次回も利用)"
+              exit 0
+            fi
+            git push || { echo "::warning::push失敗。再実行で回収"; exit 0; }
+          fi
+
+      - name: race_kind の充足状況
+        if: always()
+        run: |
+          python - << 'PY'
+          import io, os, json
+          from collections import defaultdict
+          p = "grade_fills.jsonl"
+          if not os.path.exists(p):
+              print("grade_fills.jsonl なし")
+          else:
+              by = defaultdict(lambda: [0, 0])
+              seen = {}
+              for line in io.open(p, encoding="utf-8"):
+                  line = line.strip()
+                  if not line:
+                      continue
+                  try:
+                      r = json.loads(line)
+                  except Exception:
+                      continue
+                  rid = str(r.get("race_id", ""))
+                  if rid:
+                      seen[rid] = r      # 後勝ち
+              for rid in seen:
+                  r = seen[rid]
+                  y = rid[2:6] if len(rid) >= 6 else "????"
+                  c = by[y]
+                  c[0] = c[0] + 1
+                  if str(r.get("race_kind", "")).strip():
+                      c[1] = c[1] + 1
+              print("== grade_fills.jsonl の race_kind 充足率 ==")
+              print("   年      件数   race_kind有")
+              for y in sorted(by):
+                  c = by[y]
+                  print("   %-6s %6d   %5.1f%%" % (y, c[0], 100.0 * c[1] / c[0]))
+          PY
