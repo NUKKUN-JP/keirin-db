@@ -54,7 +54,7 @@ jobs:
           GB_LIMIT: ${{ github.event.inputs.limit }}
           GB_REDO: ${{ github.event.inputs.redo_nokind }}
           GB_FILLS: grade_fills.jsonl
-        run: python backfill_meta_v3_1.py
+        run: python backfill_meta_v3.py
 
       - name: 一体型DBを月別ファイルに分割
         run: python split_monthly_v1.py split
