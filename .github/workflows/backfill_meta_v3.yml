@@ -1,0 +1,241 @@
+name: メタ補填 (grade/race_kind/day_label/series_name) v3
+
+# 【v3 修正点 ★これが2024-2025が埋まらなかった原因】
+#   旧版(v2)は backfill_meta を1回しか呼んでおらず、GB_APPLY を渡していなかった。
+#   backfill_meta_v3.py の既定は APPLY_MODE=0 (収集のみ) なので、
+#     ・grade_fills.jsonl には正しく貯まる (実際 53,094件貯まっている)
+#     ・しかし DB には一切書き込まれない
+#     ・その後の split は「無変更のDB」を分割するので keirin_months も変わらない
+#     ・commit は grade_fills.jsonl だけを更新して緑で終わる
+#   という流れになり、成果が永久に反映されなかった。
+#   → 収集ステップの後に GB_APPLY=1 の適用ステップを追加した。
+#
+#   実際 GitHub の keirin_202407.jsonl は race_kind 0.5%(12/2442) で、
+#   その12件も「Ｓ級好走」「Ｓ級降り」「Ａ級屈指」など旧正規表現のゴミだった。
+#
+# 【今回の復旧手順】
+#   grade_fills.jsonl は既に貯まっているので、再スクレイピングは不要。
+#   apply_only を 1 にして実行すれば、収集を飛ばして適用だけを行う。
+#   2024-2025 を一度に適用できるので、3ヶ月刻みで8回回す必要もない。
+#
+#     1回目: apply_only = 1  ← まずこれ。キャッシュ53,094件をDBへ反映
+#     結果を確認し、まだ欠けている期間があれば
+#     2回目以降: apply_only = 0 で start/end を指定して収集＋適用
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply_only:
+        description: '1 = 収集せず grade_fills.jsonl の適用だけ行う (復旧用・推奨)'
+        required: false
+        default: '1'
+      start_date:
+        description: '開始日 YYYYMMDD (apply_only=0 のときだけ使う)'
+        required: false
+        default: '20240101'
+      end_date:
+        description: '終了日 YYYYMMDD ※3ヶ月刻み推奨'
+        required: false
+        default: '20240331'
+      redo_nokind:
+        description: 'race_kind が空のキャッシュを再取得する (1=する / 0=旧挙動)'
+        required: false
+        default: '1'
+      limit:
+        description: '処理件数の上限 (0=無制限、試運転なら100)'
+        required: false
+        default: '0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: write
+    env:
+      TZ: Asia/Tokyo
+
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリインストール
+        run: pip install -r requirements.txt
+
+      - name: 月別ファイルから一体型DBを再構築
+        run: python split_monthly_v1.py rebuild
+
+      - name: 適用前の race_kind 充足率
+        run: |
+          python - << 'PY'
+          import io, os, json
+          p = "keirin_data_scored_v2.jsonl"
+          if not os.path.exists(p):
+              print("DBなし")
+          else:
+              by = {}
+              for line in io.open(p, encoding="utf-8"):
+                  line = line.strip()
+                  if not line:
+                      continue
+                  try:
+                      r = json.loads(line)
+                  except Exception:
+                      continue
+                  y = str(r.get("date", ""))[:4]
+                  d = by.get(y)
+                  if d is None:
+                      d = [0, 0]
+                      by[y] = d
+                  d[1] = d[1] + 1
+                  rk = r.get("race_kind")
+                  if rk is not None and str(rk).strip():
+                      d[0] = d[0] + 1
+              print("--- 適用前 ---")
+              for y in sorted(by):
+                  d = by[y]
+                  pc = 100.0 * d[0] / d[1] if d[1] else 0.0
+                  print("  " + y + " : " + str(d[0]) + "/" + str(d[1])
+                        + " = " + str(round(pc, 1)) + "%")
+          PY
+
+      - name: 収集 (apply_only=0 のときだけ)
+        if: ${{ github.event.inputs.apply_only != '1' }}
+        env:
+          GB_START: ${{ github.event.inputs.start_date }}
+          GB_END: ${{ github.event.inputs.end_date }}
+          GB_LIMIT: ${{ github.event.inputs.limit }}
+          GB_REDO: ${{ github.event.inputs.redo_nokind }}
+          GB_FILLS: grade_fills.jsonl
+        run: python backfill_meta_v3.py
+
+      # ★v3で追加。ここが欠けていたので今まで一度もDBに書かれていなかった。
+      - name: DBへ適用 (GB_APPLY=1)
+        env:
+          GB_APPLY: '1'
+          GB_FILLS: grade_fills.jsonl
+        run: python backfill_meta_v3.py
+
+      - name: 適用後の race_kind 充足率
+        run: |
+          python - << 'PY'
+          import io, os, json
+          p = "keirin_data_scored_v2.jsonl"
+          by = {}
+          samples = []
+          for line in io.open(p, encoding="utf-8"):
+              line = line.strip()
+              if not line:
+                  continue
+              try:
+                  r = json.loads(line)
+              except Exception:
+                  continue
+              y = str(r.get("date", ""))[:4]
+              d = by.get(y)
+              if d is None:
+                  d = [0, 0]
+                  by[y] = d
+              d[1] = d[1] + 1
+              rk = r.get("race_kind")
+              if rk is not None and str(rk).strip():
+                  d[0] = d[0] + 1
+                  if y in ("2024", "2025") and len(samples) < 8:
+                      samples.append(str(rk))
+          print("--- 適用後 ---")
+          ng = 0
+          for y in sorted(by):
+              d = by[y]
+              pc = 100.0 * d[0] / d[1] if d[1] else 0.0
+              mark = ""
+              if y in ("2024", "2025") and pc < 50.0:
+                  mark = "   ★まだ埋まっていない"
+                  ng = 1
+              print("  " + y + " : " + str(d[0]) + "/" + str(d[1])
+                    + " = " + str(round(pc, 1)) + "%" + mark)
+          print("2024-2025 のサンプル: " + ", ".join(samples))
+          if ng:
+              print("::warning::2024-2025 が埋まっていません。"
+                    "grade_fills.jsonl の中身と対象期間を確認してください")
+          PY
+
+      - name: 一体型DBを月別ファイルに分割
+        run: python split_monthly_v1.py split
+
+      - name: 分割結果の確認 (keirin_months に反映されたか)
+        run: |
+          python - << 'PY'
+          import io, os, json
+          d = "keirin_months"
+          if not os.path.isdir(d):
+              print("::error::keirin_months が無い")
+          else:
+              names = sorted(os.listdir(d))
+              for nm in names:
+                  if not nm.startswith("keirin_2024") and not nm.startswith("keirin_2025"):
+                      continue
+                  n = 0
+                  has = 0
+                  for line in io.open(os.path.join(d, nm), encoding="utf-8"):
+                      line = line.strip()
+                      if not line:
+                          continue
+                      try:
+                          r = json.loads(line)
+                      except Exception:
+                          continue
+                      n = n + 1
+                      rk = r.get("race_kind")
+                      if rk is not None and str(rk).strip():
+                          has = has + 1
+                  pc = 100.0 * has / n if n else 0.0
+                  print("  " + nm + " : " + str(has) + "/" + str(n)
+                        + " = " + str(round(pc, 1)) + "%")
+          PY
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # 一体型DBは成果物ではない(ランナー内の作業用・445MBでGitHubに載らない)。
+          git rm --cached keirin_data_scored_v2.jsonl 2>/dev/null || true
+          rm -f keirin_data_scored_v2.jsonl
+          if [ -d keirin_months ]; then
+            git add -A keirin_months/
+          fi
+          if [ -f grade_fills.jsonl ]; then
+            git add grade_fills.jsonl
+          fi
+          if git diff --cached --quiet; then
+            echo "::warning::変更なし。適用が効いていない可能性がある"
+          else
+            git commit -m "メタ補填v3(適用込み): $(date +%Y%m%d_%H%M)"
+            ok=0
+            for i in 1 2 3; do
+              if git pull --rebase --autostash && git push; then
+                ok=1
+                break
+              fi
+              git rebase --abort || true
+              echo "push 再試行 $i"
+              sleep 10
+            done
+            if [ "$ok" != "1" ]; then
+              echo "::error::push失敗。contents: write と"
+              echo "         Settings→Actions→Workflow permissions を確認。"
+              exit 1
+            fi
+          fi
