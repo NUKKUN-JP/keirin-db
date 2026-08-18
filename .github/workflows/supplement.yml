@@ -1,0 +1,81 @@
+name: 競輪DB穴埋め専用処理
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: '補足対象の開始日 YYYYMMDD（空欄なら全期間のDBをスキャン）'
+        required: false
+        default: ''
+      end_date:
+        description: '補足対象の終了日 YYYYMMDD（空欄なら開始日と同じ）'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-supplement
+  cancel-in-progress: false
+
+jobs:
+  supplement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリインストール
+        run: pip install -r requirements.txt
+
+      - name: 月別ファイルから一体型DBを再構築
+        run: python split_monthly_v1.py rebuild
+
+      - name: 穴埋め(補足)処理実行
+        env:
+          SUPPLEMENT_START: ${{ github.event.inputs.start_date }}
+          SUPPLEMENT_END: ${{ github.event.inputs.end_date }}
+        run: |
+          # end_dateが空欄かつstart_dateが指定されている場合は、end_dateをstart_dateと同一にする
+          if [ -n "$SUPPLEMENT_START" ] && [ -z "$SUPPLEMENT_END" ]; then
+            export SUPPLEMENT_END="$SUPPLEMENT_START"
+          fi
+          python supplement_holes_v1.py
+
+      - name: 一体型DBを月別ファイルに分割
+        if: always()
+        run: python split_monthly_v1.py split
+
+      - name: 月別DBをコミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # ランナー内の一体型DBを作業ディレクトリから除外
+          git rm --cached keirin_data_scored_v2.jsonl 2>/dev/null || true
+          
+          if [ -d keirin_months ]; then
+            git add keirin_months/
+          fi
+          
+          if git diff --cached --quiet; then
+            echo "変更なし、コミットスキップ"
+          else
+            git commit -m "DB穴埋め補完: $(date +%Y%m%d_%H%M)"
+            if ! git pull --rebase; then
+              git rebase --abort || true
+              echo "::warning::他のRunと衝突したためコミットを破棄します"
+              exit 0
+            fi
+            git push || { echo "::warning::push失敗"; exit 0; }
+          fi
