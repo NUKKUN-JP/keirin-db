@@ -1,0 +1,54 @@
+{
+  "version": "v2",
+  "updated": "2026-08",
+  "note": "終幕C2 / 極星B1 / 拮抗B4 の3本立て。買い目は重ねて重複をまとめる。",
+  "dedupe": true,
+  "star_model": "arare_star_12m.json",
+  "strategies": [
+    {
+      "id": "shumaku",
+      "label": "終幕",
+      "mark": "終",
+      "series": "vfc",
+      "points": 2,
+      "priority": 1,
+      "cond": { "race_type": ["決勝"] },
+      "backtest": {
+        "period": "202601-202608",
+        "races": 528, "hit_rate": 8.3, "roi": 115.3,
+        "months_over100": "5/8", "jackknife": 101.3,
+        "per_day": 2.3
+      }
+    },
+    {
+      "id": "kyokusei",
+      "label": "極星",
+      "mark": "★",
+      "series": "vfb",
+      "points": 1,
+      "priority": 2,
+      "cond": { "star": [5] },
+      "backtest": {
+        "period": "202601-202608",
+        "races": 2494, "hit_rate": 5.7, "roi": 109.8,
+        "months_over100": "3/8", "jackknife": 97.0,
+        "per_day": 10.9
+      }
+    },
+    {
+      "id": "kikkou",
+      "label": "拮抗",
+      "mark": "拮",
+      "series": "vfb",
+      "points": 4,
+      "priority": 3,
+      "cond": { "q": ["Q1"] },
+      "backtest": {
+        "period": "202601-202608",
+        "races": 845, "hit_rate": 13.7, "roi": 101.0,
+        "months_over100": "3/8", "jackknife": 91.8,
+        "per_day": 3.7
+      }
+    }
+  ]
+}
