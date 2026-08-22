@@ -1,0 +1,13 @@
+{
+ "date": "20260822",
+ "generated": "2026-08-22 05:32:30",
+ "star_model": {
+  "learn_from": "20250101",
+  "learn_to": "20251231",
+  "mid": "20250630",
+  "n_learn": 20826,
+  "min_n_cond": 100
+ },
+ "conditions_updated": "2026-08",
+ "races": []
+}
