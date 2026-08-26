@@ -1,0 +1,164 @@
+name: 当日基本データ事前取得
+
+on:
+  schedule:
+    # 取得元は深夜から朝方にメンテナンスに入ることがある。
+    # そこを避けて 0時半に1回、朝に2回 の計3回とする。
+    # JST 0:30 (UTC 15:30 前日) 1回目。日付が変わった直後
+    - cron: '30 15 * * *'
+    # JST 6:00 / 7:00 (UTC 21:00 / 22:00) 2〜3回目。穴埋め込み
+    - cron: '0 21 * * *'
+    - cron: '0 22 * * *'
+    # JST 13:00 / 13:30 / 14:00 (UTC 4:00 / 4:30 / 5:00)
+    #   ミッドナイトのラインは午後にならないと載らないので、
+    #   この時間帯に3回試して欠けを埋める
+    - cron: '0 4 * * *'
+    - cron: '30 4 * * *'
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: '取得開始日 YYYYMMDD（空欄なら当日）'
+        required: false
+        default: ''
+      end_date:
+        description: '取得終了日 YYYYMMDD（空欄なら開始日と同じ）'
+        required: false
+        default: ''
+      line_heal:
+        description: 'ライン補完モード（1=有効）'
+        required: false
+        default: ''
+      skip_picks:
+        description: '買い目生成をスキップ（1=スキップ）'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-today
+  cancel-in-progress: false
+
+jobs:
+  fetch_today:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Node セットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: ライブラリインストール
+        run: pip install -r requirements.txt
+
+      - name: 当日基本データ取得
+        env:
+          KEIRIN_START: ${{ github.event.inputs.start_date }}
+          KEIRIN_END: ${{ github.event.inputs.end_date }}
+          KEIRIN_NOTIFY_FAIL: ${{ github.event.schedule == '0 22 * * *' && '1' || '0' }}
+          KEIRIN_LINE_HEAL: ${{ (github.event.schedule == '30 15 * * *' || github.event.inputs.line_heal == '0') && '0' || '1' }}
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+        run: python fetch_today_basic_v7.py
+
+      # ------------------------------------------------------------
+      # 買い目の生成 (2段構成)
+      #   build_picks.py  payload生成 + ★計算 + 条件判定 -> _picks_stage1.json
+      #   run_picks.js    oracle_core.js で買い目生成    -> picks/YYYYMMDD.json
+      #
+      # 出走表が取れていないと何も作れないので、失敗しても
+      # ワークフロー全体は止めない (continue-on-error)。
+      # 出走表のコミットだけは必ず行う。
+      # ------------------------------------------------------------
+      # アプリは端末の /storage/emulated/0/Download/takusen を見るため、
+      # リポジトリの中に同じ形のフォルダを作って TAKUSEN_DIR で指す。
+      #   .takusen/data/dicts   -> リポジトリの dicts/
+      #   .takusen/data/static  -> bank_data.json / venue_home_direction.json
+      # 環境変数を渡さなければ端末では従来どおり動く。
+      - name: 辞書の置き場所を整える
+        if: ${{ github.event.inputs.skip_picks != '1' }}
+        run: |
+          set -e
+          mkdir -p .takusen/data/static
+          if [ -d dicts ]; then
+            ln -sfn "$PWD/dicts" .takusen/data/dicts
+          else
+            echo "::warning::dicts/ がありません"
+          fi
+          for f in bank_data.json venue_home_direction.json; do
+            if [ -f "$f" ]; then
+              cp -f "$f" .takusen/data/static/
+            else
+              echo "::warning::$f がありません"
+            fi
+          done
+          if [ -d today_cache ]; then
+            ln -sfn "$PWD/today_cache" .takusen/data/today_cache
+          fi
+          echo "--- .takusen の中身 ---"
+          ls -l .takusen/data/ || true
+          ls .takusen/data/dicts/ 2>/dev/null | head -20 || true
+
+      - name: 買い目を作る
+        if: ${{ github.event.inputs.skip_picks != '1' }}
+        continue-on-error: true
+        env:
+          TZ: Asia/Tokyo
+          TAKUSEN_DIR: ${{ github.workspace }}/.takusen
+        run: |
+          set +e
+          DATE_ARG="${{ github.event.inputs.start_date }}"
+          if [ -z "$DATE_ARG" ]; then
+            DATE_ARG=$(date +%Y%m%d)
+          fi
+          echo "対象日: $DATE_ARG"
+          python3 build_picks.py "$DATE_ARG"
+          RC=$?
+          if [ $RC -ne 0 ]; then
+            echo "::warning::build_picks.py が失敗しました (rc=$RC)"
+            exit 0
+          fi
+          node run_picks.js "$DATE_ARG"
+          RC=$?
+          if [ $RC -ne 0 ]; then
+            echo "::warning::run_picks.js が失敗しました (rc=$RC)"
+          fi
+          exit 0
+
+      - name: 中間ファイルを消す
+        if: always()
+        run: |
+          rm -f _picks_stage1.json
+          rm -rf .takusen
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -d today_cache ]; then
+            git add -A today_cache/
+          fi
+          if [ -d picks ]; then
+            git add -A picks/
+          fi
+          if git diff --cached --quiet; then
+            echo "変更なし、コミットスキップ"
+          else
+            git commit -m "当日データ: $(date +%Y%m%d_%H%M)"
+            git pull --rebase
+            git push
+          fi
