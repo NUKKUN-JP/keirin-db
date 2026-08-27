@@ -2,19 +2,21 @@ name: 当日基本データ事前取得
 
 on:
   schedule:
-    # 取得元は深夜から朝方にメンテナンスに入ることがある。
-    # そこを避けて 0時半に1回、朝に2回 の計3回とする。
-    # JST 0:30 (UTC 15:30 前日) 1回目。日付が変わった直後
+    # v8: どの実行も同じ処理をする (役割分担はしない)。
+    #   毎回「全会場を確認 → 未readyを埋める → 買い目を作り直す」を通す。
+    #   朝から買い目が出て、後からラインが付いたレースも自動で更新される。
+    # JST 0:30 (UTC 15:30 前日) 日付が変わった直後
     - cron: '30 15 * * *'
-    # JST 6:00 / 7:00 (UTC 21:00 / 22:00) 2〜3回目。穴埋め込み
-    - cron: '0 21 * * *'
+    # JST 7:00 (UTC 22:00) 昼開催の1Rは10:45発走。ここで買い目まで作る
     - cron: '0 22 * * *'
-    # JST 13:00 / 13:30 / 14:00 (UTC 4:00 / 4:30 / 5:00)
-    #   ミッドナイトのラインは午後にならないと載らないので、
-    #   この時間帯に3回試して欠けを埋める
+    # JST 10:00 (UTC 1:00) 朝に取りこぼした会場・ラインを拾う
+    - cron: '0 1 * * *'
+    # JST 13:00 (UTC 4:00) ミッドナイトのラインが載り始める
     - cron: '0 4 * * *'
-    - cron: '30 4 * * *'
-    - cron: '0 5 * * *'
+    # JST 16:00 (UTC 7:00) ミッドナイトの一次確定
+    - cron: '0 7 * * *'
+    # JST 19:00 (UTC 10:00) ミッドナイト最終。ここで揃わなければ諦める
+    - cron: '0 10 * * *'
   workflow_dispatch:
     inputs:
       start_date:
@@ -23,10 +25,6 @@ on:
         default: ''
       end_date:
         description: '取得終了日 YYYYMMDD（空欄なら開始日と同じ）'
-        required: false
-        default: ''
-      line_heal:
-        description: 'ライン補完モード（1=有効）'
         required: false
         default: ''
       skip_picks:
@@ -69,10 +67,9 @@ jobs:
           KEIRIN_START: ${{ github.event.inputs.start_date }}
           KEIRIN_END: ${{ github.event.inputs.end_date }}
           KEIRIN_NOTIFY_FAIL: ${{ github.event.schedule == '0 22 * * *' && '1' || '0' }}
-          KEIRIN_LINE_HEAL: ${{ (github.event.schedule == '30 15 * * *' || github.event.inputs.line_heal == '0') && '0' || '1' }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
-        run: python fetch_today_basic_v7.py
+        run: python fetch_today_basic_v8.py
 
       # ------------------------------------------------------------
       # 買い目の生成 (2段構成)
@@ -120,22 +117,44 @@ jobs:
           TAKUSEN_DIR: ${{ github.workspace }}/.takusen
         run: |
           set +e
-          DATE_ARG="${{ github.event.inputs.start_date }}"
-          if [ -z "$DATE_ARG" ]; then
-            DATE_ARG=$(date +%Y%m%d)
+          # v8: 開始日だけを固定していたため、期間を指定しても
+          #   初日の買い目しか作られていなかった。対象日を全部まわす。
+          START="${{ github.event.inputs.start_date }}"
+          END="${{ github.event.inputs.end_date }}"
+          if [ -z "$START" ]; then
+            START=$(date +%Y%m%d)
           fi
-          echo "対象日: $DATE_ARG"
-          python3 build_picks.py "$DATE_ARG"
-          RC=$?
-          if [ $RC -ne 0 ]; then
-            echo "::warning::build_picks.py が失敗しました (rc=$RC)"
-            exit 0
+          if [ -z "$END" ]; then
+            END="$START"
           fi
-          node run_picks.js "$DATE_ARG"
-          RC=$?
-          if [ $RC -ne 0 ]; then
-            echo "::warning::run_picks.js が失敗しました (rc=$RC)"
-          fi
+          echo "対象期間: $START 〜 $END"
+
+          CUR="$START"
+          NG=0
+          while [ "$CUR" -le "$END" ]; do
+            echo "======== 買い目 $CUR ========"
+            if [ -f "today_cache/races_${CUR}.json" ]; then
+              python3 build_picks.py "$CUR"
+              RC=$?
+              if [ $RC -ne 0 ]; then
+                echo "::warning::build_picks.py 失敗 $CUR (rc=$RC)"
+                NG=$((NG+1))
+              else
+                node run_picks.js "$CUR"
+                RC=$?
+                if [ $RC -ne 0 ]; then
+                  echo "::warning::run_picks.js 失敗 $CUR (rc=$RC)"
+                  NG=$((NG+1))
+                fi
+              fi
+            else
+              echo "::warning::出走表がありません: today_cache/races_${CUR}.json"
+              NG=$((NG+1))
+            fi
+            CUR=$(date -d "$CUR +1 day" +%Y%m%d)
+          done
+
+          echo "買い目生成おわり (失敗 ${NG}件)"
           exit 0
 
       - name: 中間ファイルを消す
