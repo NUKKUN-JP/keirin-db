@@ -1,0 +1,171 @@
+name: 統計辞書 自動生成
+
+on:
+  schedule:
+    # JST 6:00 (UTC 21:00) に1日1回。daily_update の結果確定(JST 0:05)後・DBが最新の状態で統計を生成。
+    # 統計は過去DBの集計のみ(通信なし・リアルタイム情報に非依存)なので1日1回で十分。
+    - cron: '0 21 * * *'
+  # v341: 月別辞書(dicts_monthly)の生成入力は廃止した。
+  #   過去日のバックテストをやめたため、cutoff 別の辞書は要らない。
+  #   当日の予想は通常辞書 dicts/ だけを使う。
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keirin-stats
+  cancel-in-progress: false
+
+jobs:
+  build-stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリインストール
+        run: pip install -r requirements.txt
+
+      - name: 月別ファイルから一体型DBを再構築
+        run: python split_monthly_v1.py rebuild
+
+      - name: takesen 構造を用意してDB配置
+        run: |
+          mkdir -p takusen/data/dicts takusen/data/static takusen/code/FINAL
+          # 一体型DBを takusen/data へ
+          if [ -f keirin_data_scored_v2.jsonl ]; then
+            cp keirin_data_scored_v2.jsonl takusen/data/keirin_data_scored_v2.jsonl
+          else
+            echo "::error::keirin_data_scored_v2.jsonl が無い (rebuild失敗?)"
+            exit 1
+          fi
+          # 補助ファイルを takusen/data/static/ に配置 (直下 or static/ から拾う)
+          if [ -d static ]; then
+            cp -r static/. takusen/data/static/ 2>/dev/null || true
+          fi
+          for sf in venue_home_direction.json bank_data.json venue_profile.json; do
+            if [ -f "$sf" ]; then
+              cp "$sf" "takusen/data/static/$sf" 2>/dev/null || true
+            fi
+            if [ -f "takusen/data/static/$sf" ]; then
+              echo "[static] OK: $sf"
+            else
+              echo "::warning::補助ファイルが無い: $sf (系統1が不完全になる可能性)"
+            fi
+          done
+          # 既存の dicts/ があれば takusen/data/dicts/ に引き継ぐ
+          if [ -d dicts ]; then
+            cp -r dicts/. takusen/data/dicts/ 2>/dev/null || true
+          fi
+
+      - name: 統計生成 (build_all_stats_v1)
+        run: python build_all_stats_v1.py
+
+      - name: 生成統計を dicts/ にコピー
+        run: |
+          mkdir -p dicts
+          # rsrank_7car はかつて98MBあり、GitHubの制限を避けるため除外していた。
+          # その後 by_rs_rank の圧縮書式になり 1.5MB まで落ちたので除外の理由は消えている。
+          # 除外したままだと Actions 側に辞書が無く、御告の第二柱が全レースで無効になる。
+          # そのとき __oraRsrFluct は 1.0 を返すためエラーが出ず、
+          # 買い目の優劣だけが静かに消える。必ずコピーすること。
+          for f in \
+            kimari_player_role_FINAL.jsonl \
+            kimari_player_cond.jsonl \
+            kimari_stats_FINAL.json \
+            ana_score_global_FINAL.jsonl \
+            ana_score_venue_FINAL.jsonl \
+            ana_score_summary.txt \
+            player_line_lead_rate_FINAL.json \
+            player_profile_index_FINAL.json \
+            rawscore_pattern_stats_FINAL.json \
+            player_rsrank_finish_9car_FINAL.jsonl \
+            player_rsrank_finish_7car_FINAL.jsonl ; do
+            if [ -f "takusen/data/dicts/$f" ]; then
+              cp "takusen/data/dicts/$f" "dicts/$f"
+            fi
+          done
+
+          # player_profiles_FINAL/ フォルダ(プロファイル群)も反映 (サイズ確認のうえ)
+          if [ -d takusen/data/dicts/player_profiles_FINAL ]; then
+            rm -rf dicts/player_profiles_FINAL
+            cp -r takusen/data/dicts/player_profiles_FINAL dicts/player_profiles_FINAL
+          fi
+          echo "=== dicts/ サイズ確認 (各ファイル25MB制限) ==="
+          ls -la dicts/ || true
+          # 念のため: 25MB(26214400B)超のファイルがあれば警告 (GitHub raw制限)
+          find dicts/ -type f -size +25M -exec echo "::warning::25MB超のファイル: {}" \;
+
+      - name: 必須辞書がそろっているか検める
+        run: |
+          # 辞書の欠落は無音で失敗する。7car が無くても、月別辞書が無くても、
+          # 予想は「エラーなく」出てしまい、中身だけが劣化する。
+          # 過去に2度これで数字を歪めているので、ここは警告ではなく落とす。
+          MISSING=0
+          for f in \
+            kimari_stats_FINAL.json \
+            ana_score_global_FINAL.jsonl \
+            ana_score_venue_FINAL.jsonl \
+            player_line_lead_rate_FINAL.json \
+            player_profile_index_FINAL.json \
+            rawscore_pattern_stats_FINAL.json \
+            player_rsrank_finish_7car_FINAL.jsonl \
+            player_rsrank_finish_9car_FINAL.jsonl ; do
+            if [ -f "dicts/$f" ]; then
+              SZ=$(stat -c%s "dicts/$f")
+              echo "[dict] OK  $f  ${SZ}B"
+              if [ "$SZ" -lt 1000 ]; then
+                echo "::error::中身がほぼ空: dicts/$f (${SZ}B)"
+                MISSING=1
+              fi
+            else
+              echo "::error::必須辞書が無い: dicts/$f"
+              MISSING=1
+            fi
+          done
+
+          # 7car は圧縮書式 (1行目が __baseline__ / by_rs_rank) であること。
+          # 旧書式 (venue/sky/rank1..9) が混ざるとアプリが引けない。
+          RS=dicts/player_rsrank_finish_7car_FINAL.jsonl
+          if [ -f "$RS" ]; then
+            if head -1 "$RS" | grep -q "by_rs_rank"; then
+              echo "[dict] OK  7car は圧縮書式"
+            else
+              echo "::error::7car が圧縮書式ではない (by_rs_rank が無い)"
+              MISSING=1
+            fi
+          fi
+
+          if [ "$MISSING" != "0" ]; then
+            echo "::error::必須辞書が欠けている。予想が静かに劣化するため、ここで止める。"
+            exit 1
+          fi
+
+      - name: dicts/ をコミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -d dicts ]; then
+            git add dicts/
+          fi
+          if git diff --cached --quiet; then
+            echo "統計に変更なし、コミットスキップ"
+          else
+            git commit -m "統計辞書更新: $(date +%Y%m%d_%H%M)"
+            if ! git pull --rebase; then
+              git rebase --abort || true
+              echo "::warning::衝突したため今回の統計は破棄。次回実行が再生成します"
+              exit 0
+            fi
+            git push || { echo "::warning::push失敗。次回実行が再生成します"; exit 0; }
+          fi
