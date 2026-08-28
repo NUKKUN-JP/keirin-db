@@ -36,30 +36,22 @@ jobs:
           python-version: '3.11'
 
       - name: ライブラリインストール
-        run: |
-          # engine (predict_v14_wind_unified.py) は pandas を要求する。
-          # 入れておけば会場コードを engine から取れる。
-          # 入らなくても build_bvdb.py は API から作れるので止まらない。
-          pip install requests
-          pip install pandas || echo "::warning::pandas を入れられませんでした (APIから会場コードを作ります)"
+        # 会場コードは統合DBの race_id から取るので、engine は要らない。
+        # (pandas / bs4 を入れなくても動く)
+        run: pip install requests
 
       - name: 月別ファイルから一体型DBを再構築
         run: python split_monthly_v1.py rebuild
 
-      - name: takusen 構造を用意してDB配置
+      - name: 統合DBを確かめる
         run: |
           # build_stats.yml と同じ置き方にする。
           # build_bvdb.py は engine と統合DBを自分で探すので、
           # 素直に takusen/ の下に並べておけばよい。
-          mkdir -p takusen/data takusen/code
-          if [ -f keirin_data_scored_v2.jsonl ]; then
-            cp keirin_data_scored_v2.jsonl takusen/data/
-          fi
-          if [ -f predict_v14_wind_unified.py ]; then
-            cp predict_v14_wind_unified.py takusen/code/
-          fi
-          echo "=== 配置 ==="
-          ls -la takusen/data takusen/code || true
+          # build_bvdb.py は直下の keirin_data_scored_v2.jsonl を先に見る。
+          # rebuild でそこに出来ているので、そのままでよい。
+          echo "=== 統合DB ==="
+          ls -la keirin_data_scored_v2.jsonl || true
 
       - name: BVDB を作る
         env:
@@ -111,7 +103,6 @@ jobs:
         run: |
           # bvdb/ は消さない。日別ファイルと venue_codes.json が入っており、
           # 次回の再開と通信削減に使う。
-          rm -rf takusen
           rm -f keirin_data_scored_v2.jsonl
 
       - name: コミット＆プッシュ
