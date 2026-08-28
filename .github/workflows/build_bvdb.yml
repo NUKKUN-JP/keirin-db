@@ -1,0 +1,134 @@
+name: BVDB 構築
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: '開始日 YYYYMMDD (空なら 20260415 = Hが入った日)'
+        required: false
+        default: ''
+      to_date:
+        description: '終了日 YYYYMMDD (空なら統合DBの最終日)'
+        required: false
+        default: ''
+      merge:
+        description: '1 なら日別を BVDB.json にまとめる'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  build-bvdb:
+    runs-on: ubuntu-latest
+    # 1万レース級になるので、既定の6時間では足りないことがある。
+    # 日ごとに保存して再開できる作りなので、打ち切られても続きから流せる。
+    timeout-minutes: 350
+
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリインストール
+        run: |
+          # engine (predict_v14_wind_unified.py) は pandas を要求する。
+          # 入れておけば会場コードを engine から取れる。
+          # 入らなくても build_bvdb.py は API から作れるので止まらない。
+          pip install requests
+          pip install pandas || echo "::warning::pandas を入れられませんでした (APIから会場コードを作ります)"
+
+      - name: 月別ファイルから一体型DBを再構築
+        run: python split_monthly_v1.py rebuild
+
+      - name: takusen 構造を用意してDB配置
+        run: |
+          # build_stats.yml と同じ置き方にする。
+          # build_bvdb.py は engine と統合DBを自分で探すので、
+          # 素直に takusen/ の下に並べておけばよい。
+          mkdir -p takusen/data takusen/code
+          if [ -f keirin_data_scored_v2.jsonl ]; then
+            cp keirin_data_scored_v2.jsonl takusen/data/
+          fi
+          if [ -f predict_v14_wind_unified.py ]; then
+            cp predict_v14_wind_unified.py takusen/code/
+          fi
+          echo "=== 配置 ==="
+          ls -la takusen/data takusen/code || true
+
+      - name: BVDB を作る
+        env:
+          TZ: Asia/Tokyo
+          BVDB_FROM: ${{ github.event.inputs.from_date }}
+          BVDB_TO: ${{ github.event.inputs.to_date }}
+          BVDB_MERGE: ${{ github.event.inputs.merge }}
+        run: python build_bvdb.py
+
+      - name: できたものを確かめる
+        if: always()
+        continue-on-error: false
+        run: |
+          if [ ! -d bvdb ]; then
+            echo "::error::bvdb/ ができていません"
+            exit 1
+          fi
+          echo "=== bvdb/ ==="
+          ls -la bvdb | head -40
+          N=$(ls -1 bvdb/BVDB_*.json 2>/dev/null | wc -l)
+          echo "日別ファイル: ${N}件"
+          if [ "$N" = "0" ]; then
+            echo "::error::日別ファイルが1つもできていません"
+            exit 1
+          fi
+          # 中身が空でないかを1件だけ確かめる
+          F=$(ls -1 bvdb/BVDB_*.json | head -1)
+          python3 - "$F" <<'PY'
+          import json, sys
+          b = json.load(open(sys.argv[1], encoding="utf-8"))
+          n = b.get("n_races", 0)
+          print("[chk] %s  %dレース" % (sys.argv[1], n))
+          if n == 0:
+              print("::error::レースが0件です")
+              raise SystemExit(1)
+          r = b["races"][0]
+          need = ["race_id", "venue", "race_no", "post_time",
+                  "time_zone", "payouts", "players"]
+          miss = [k for k in need if not r.get(k)]
+          if miss:
+              print("::error::項目が欠けています: " + ", ".join(miss))
+              raise SystemExit(1)
+          print("[chk] 選手 %d人 / 券種 %d種"
+                % (len(r["players"]), len(r["payouts"])))
+          PY
+
+      - name: 中間ファイルを消す
+        if: always()
+        run: |
+          # bvdb/ は消さない。日別ファイルと venue_codes.json が入っており、
+          # 次回の再開と通信削減に使う。
+          rm -rf takusen
+          rm -f keirin_data_scored_v2.jsonl
+
+      - name: コミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -d bvdb ]; then
+            git add bvdb/
+          fi
+          if git diff --cached --quiet; then
+            echo "変化なし"
+            exit 0
+          fi
+          git commit -m "BVDB: $(date +%Y%m%d_%H%M)"
+          git pull --rebase --autostash || true
+          git push || {
+            echo "::error::pushに失敗した。bvdb/ が更新されていない。"
+            exit 1
+          }
