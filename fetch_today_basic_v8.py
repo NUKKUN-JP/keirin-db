@@ -739,15 +739,26 @@ def heal_lines(engine, races, tdt, date_str):
     return filled
 
 
+# v8: 会場ごとの取得結果を数えておく。
+#   check_venue_open が偽を返すと無言で終わるため、
+#   43会場すべてが空でも「開催会場なし」としか出ず、
+#   何が起きたのか分からなかった (8/29-8/31 がこれ)。
+_FETCH_STAT = {"closed": 0, "err_open": 0, "empty": 0,
+               "ok": 0, "err_race": 0, "api": 0}
+_CODE_TO_NAME = {}
+
+
 def fetch_one_venue(engine, pc, pn, tdt, date_str):
     """1会場分の取得。少レース時は1回だけ再取得して多い方を採用"""
     import time
     try:
         res = engine.check_venue_open(pc, pn, tdt)
     except Exception as e:
+        _FETCH_STAT["err_open"] = _FETCH_STAT["err_open"] + 1
         print("[warn] " + pn + " 開催確認失敗: " + str(e)[:60])
         return None
     if not res:
+        _FETCH_STAT["closed"] = _FETCH_STAT["closed"] + 1
         return None
     pc2, pn2, bd, dy = res
     try:
@@ -756,6 +767,7 @@ def fetch_one_venue(engine, pc, pn, tdt, date_str):
         print("[warn] " + pn + " 取得失敗: " + str(e)[:60])
         vr = []
     if vr and not venue_is_weak(vr):
+        _FETCH_STAT["ok"] = _FETCH_STAT["ok"] + 1
         return vr
     # 取りこぼし疑い (少レース or 歯抜け) → 待機して再取得
     print("[retry] " + pn + ": " + str(len(vr) if vr else 0)
@@ -767,8 +779,264 @@ def fetch_one_venue(engine, pc, pn, tdt, date_str):
         print("[warn] " + pn + " 再取得失敗: " + str(e)[:60])
         vr2 = []
     if vr2 and (not vr or len(vr2) > len(vr)):
+        _FETCH_STAT["ok"] = _FETCH_STAT["ok"] + 1
         return vr2
-    return vr if vr else None
+    if vr:
+        _FETCH_STAT["ok"] = _FETCH_STAT["ok"] + 1
+        return vr
+    _FETCH_STAT["empty"] = _FETCH_STAT["empty"] + 1
+    return None
+
+
+# ============================================================
+# v9: ウィンチケットAPIだけで1会場ぶんの出走表を作る。
+#
+#   従来の取得は engine.check_venue_open() に頼っており、
+#   それが偽を返すと 43会場すべてが無言で落ちる。
+#   8/29〜8/31 が丸ごと取れなかったのはこれで、原因も追えなかった。
+#
+#   一方、同じAPIから4月の1,260レースを取ったときは
+#   ライン・発走・選手のいずれも欠けが0件だった。過去日でも引ける。
+#   そこで、従来経路が0件のときはAPIから組み立てる。
+#
+#   出力は既存キャッシュと同じ形にする。実物と突き合わせて確認した:
+#     full_info '日高 裕太/静岡/24歳/121期/100.12点'
+#     h1        '8/27 9'  複数日は '8/26 5・6'  無ければ 'なし'
+#     h2/h3     '四日市 Ｆ１ 8/17 3・1・1'
+#     weather   '天気:曇 風速:2m 風向:西'
+# ============================================================
+_GRADE_WIDE = {"F1": "Ｆ１", "F2": "Ｆ２", "G1": "Ｇ１",
+               "G2": "Ｇ２", "G3": "Ｇ３"}
+
+
+def _md(date8):
+    """20260817 -> 8/17"""
+    d = str(date8 or "")
+    if len(d) != 8 or not d.isdigit():
+        return ""
+    return str(int(d[4:6])) + "/" + str(int(d[6:8]))
+
+
+def _api_full_info(pl, rec):
+    """'姓 名/府県/24歳/121期/100.12点'"""
+    ln = str((pl or {}).get("lastName", "") or "")
+    fn = str((pl or {}).get("firstName", "") or "")
+    if ln and fn:
+        name = ln + " " + fn
+    else:
+        name = str((pl or {}).get("name", "") or "")
+    pref = str((pl or {}).get("prefecture", "") or "")
+    age = (pl or {}).get("age")
+    term = (pl or {}).get("term")
+    pt = (rec or {}).get("racePoint")
+    parts = [name, pref]
+    parts.append((str(age) + "歳") if age is not None else "")
+    parts.append((str(term) + "期") if term is not None else "")
+    parts.append((str(pt) + "点") if pt is not None else "")
+    return "/".join(parts)
+
+
+def _orders_str(results):
+    """着順を ・ でつなぐ。着外や失格は数字のまま。"""
+    out = []
+    for r in (results or []):
+        if not isinstance(r, dict):
+            continue
+        o = r.get("order")
+        if o is None:
+            continue
+        out.append(str(o))
+    return "・".join(out)
+
+
+def _cup_meta(cups_by_id, cup_id, code_to_name):
+    """cupId から (会場名, 全角グレード, 開始日M/D) を作る"""
+    cid = str(cup_id or "")
+    c = cups_by_id.get(cid) or {}
+    vname = ""
+    vid = str(c.get("venueId", "") or "")
+    if vid:
+        vname = code_to_name.get(vid, "")
+    if not vname and len(cid) >= 10:
+        vname = code_to_name.get(cid[8:10], "")
+    g = _GRADE_WIDE.get(grade_of(c.get("grade")), "")
+    start = str(c.get("startDate", "") or "")
+    if not start and len(cid) >= 10:
+        # cupId は YYYYMMDD + 会場2桁
+        start = cid[:8]
+    return (vname, g, _md(start))
+
+
+def _api_history(rec, cur_cup_id, cups_by_id, code_to_name):
+    """h1 (今場所) / h2 / h3 (前2場所) を作る"""
+    h1 = "なし"
+    hist = []
+    for cup in (rec.get("latestCupResults") or []):
+        if not isinstance(cup, dict):
+            continue
+        cid = str(cup.get("cupId", "") or "")
+        rr = cup.get("raceResults") or []
+        od = _orders_str(rr)
+        if not od:
+            continue
+        if cid == str(cur_cup_id):
+            # 今場所は「開始日 着順」だけ
+            vname, g, md = _cup_meta(cups_by_id, cid, code_to_name)
+            first = ""
+            # raceId は RR(2) + 会場(2) + YYYYMMDD(8)。日付は末尾8桁。
+            for r in rr:
+                if isinstance(r, dict) and r.get("raceId"):
+                    rid = str(r["raceId"])
+                    if len(rid) >= 12:
+                        first = _md(rid[-8:])
+                        break
+            if not first:
+                first = md
+            h1 = (first + " " + od).strip()
+            continue
+        vname, g, md = _cup_meta(cups_by_id, cid, code_to_name)
+        label = " ".join([x for x in (vname, g, md) if x])
+        hist.append((cid, (label + " " + od).strip()))
+    hist.sort(reverse=True)          # 新しい開催が先
+    h2 = hist[0][1] if len(hist) > 0 else ""
+    h3 = hist[1][1] if len(hist) > 1 else ""
+    return (h1, h2, h3)
+
+
+def _api_weather(race):
+    w = str((race or {}).get("weather", "") or "").strip()
+    ws = str((race or {}).get("windSpeed", "") or "").strip()
+    wd = str((race or {}).get("windDirection", "") or "").strip()
+    if not w:
+        w = "不明"
+    else:
+        # 「曇り」→「曇」。既存キャッシュは1文字表記。
+        w = w.replace("り", "")
+    if ws:
+        try:
+            f = float(ws)
+            ws = str(int(f)) if f == int(f) else str(f)
+        except Exception:
+            pass
+        ws2 = ws + "m"
+    else:
+        ws2 = "--"
+    wd2 = wd if wd else "--"
+    return "天気:" + w + " 風速:" + ws2 + " 風向:" + wd2
+
+
+def build_races_from_api(pc, pn, date_str, code_to_name):
+    """1会場ぶんの出走表をAPIから作る。取れなければ []。"""
+    cd = _shb_resolve_cup_day(pc, date_str, 1)
+    if cd is None:
+        return []
+    cup_id, day = cd
+
+    out = []
+    miss = 0
+    rno = 1
+    while rno <= 12 and miss < 3:
+        data = None
+        try:
+            data = _shb_http_json(_shb_api_url(cup_id, day, rno))
+        except Exception:
+            data = None
+        if not isinstance(data, dict) or not data.get("entries"):
+            miss = miss + 1
+            rno = rno + 1
+            continue
+        miss = 0
+
+        race = data.get("race") or {}
+        sch = data.get("schedule") or {}
+        cid = str(sch.get("cupId", "") or "")
+        cups_by_id = {}
+        for c in (data.get("cups") or []):
+            if isinstance(c, dict):
+                cups_by_id[str(c.get("id", ""))] = c
+        cup = cups_by_id.get(cid) or {}
+
+        pl_by_id = {}
+        for pl in (data.get("players") or []):
+            pl_by_id[str(pl.get("id"))] = pl
+        rec_by_id = {}
+        for rc in (data.get("records") or []):
+            rec_by_id[str(rc.get("playerId"))] = rc
+
+        players = {}
+        for e in (data.get("entries") or []):
+            if not isinstance(e, dict):
+                continue
+            bike = e.get("number")
+            if bike is None:
+                bike = e.get("bracketNumber")
+            if bike is None:
+                continue
+            pid = str(e.get("playerId"))
+            pl = pl_by_id.get(pid) or {}
+            rc = rec_by_id.get(pid) or {}
+            h1, h2, h3 = _api_history(rc, cid, cups_by_id, code_to_name)
+            players[str(int(bike))] = {
+                "full_info": _api_full_info(pl, rc),
+                "h1": h1, "h2": h2, "h3": h3,
+                "style": str(rc.get("style", "") or ""),
+                "pclass": player_class_of(e.get("playerCurrentTermClass"),
+                                          e.get("playerCurrentTermGroup")),
+                "s": rc.get("standing"),
+                "h": rc.get("home") if rc.get("hasHome") is True else None,
+                "b": rc.get("back"),
+            }
+
+        out.append({
+            "race_id": pc + date_str + ("%02d" % rno),
+            "date": date_str,
+            "place": pn,
+            "race_no": rno,
+            "post_time": _api_post_time(race.get("startAt")),
+            "line": _line_from_api(data),
+            "grade": grade_of(cup.get("grade")),
+            "race_kind": build_race_kind(race.get("class"),
+                                         race.get("raceType")),
+            "day_label": day_label_of(sch.get("day"), cup.get("duration")),
+            "weather": _api_weather(race),
+            "players": players,
+        })
+        rno = rno + 1
+    return out
+
+
+def _api_post_time(ts):
+    """発走時刻を日本時間の HH:MM で。環境のTZに左右されないよう固定。"""
+    try:
+        from datetime import timezone as _tz, timedelta as _td
+        jst = _tz(_td(hours=9))
+        return datetime.fromtimestamp(int(ts), jst).strftime("%H:%M")
+    except Exception:
+        return "--:--"
+
+
+def _probe_open(engine, tdt, date_str):
+    """0件だったときに、1会場だけ詳しく試して手掛かりを出す。
+
+    どこで止まっているのかが分からないと直しようがないので、
+    check_venue_open の戻り値をそのまま見せる。
+    """
+    try:
+        codes = list(engine.CODES.items())
+    except Exception:
+        return
+    print("[probe] 代表3会場で開催確認を試します (" + date_str + ")")
+    n = 0
+    for pc, pn in codes:
+        if n >= 3:
+            break
+        n = n + 1
+        try:
+            res = engine.check_venue_open(pc, pn, tdt)
+            print("  %s %-6s -> %s" % (pc, pn, repr(res)[:90]))
+        except Exception as e:
+            print("  %s %-6s -> 例外 %s: %s"
+                  % (pc, pn, type(e).__name__, str(e)[:70]))
 
 
 def race_no_of(rec):
@@ -937,15 +1205,50 @@ def main():
     # ---- 会場の確認は毎回すべて行う ----
     #   キャッシュに無い会場、レース数が不足している会場だけ取りに行く。
     #   ここを省くと、後から掲載された会場に永久に気づけない。
+    # API側で会場名を引くための対応表 (engine の CODES をそのまま使う)
+    global _CODE_TO_NAME
+    _CODE_TO_NAME = {}
+    try:
+        for _pc in engine.CODES:
+            _CODE_TO_NAME[_pc] = engine.CODES[_pc]
+    except Exception:
+        pass
+
     changed = False
     n_added_total = 0
     n_new_venue = 0
+    for k in _FETCH_STAT:
+        _FETCH_STAT[k] = 0
+    n_scan = 0
     for pc in engine.CODES:
         pn = engine.CODES[pc]
         cur = have_pc.get(pc)
         if cur and not venue_is_weak(cur):
             continue          # その会場はレースが揃っている
-        vr = fetch_one_venue(engine, pc, pn, tdt, date_str)
+        n_scan = n_scan + 1
+        # v9: ウィンチケットAPIを主にする。
+        #   従来経路は check_venue_open が偽を返すと無言で落ち、
+        #   8/29〜8/31 は43会場すべてが空になった。原因も追えていない。
+        #   一方APIは、4月の1,260レースでライン・発走・選手のいずれも
+        #   欠けが0件だった。過去日も引ける。
+        #   そこでAPIを先に試し、取れなかった会場だけ従来経路に回す。
+        vr = []
+        try:
+            vr = build_races_from_api(pc, pn, date_str, _CODE_TO_NAME)
+        except Exception as e:
+            print("[warn] " + pn + " API取得で例外: " + str(e)[:60])
+            vr = []
+        if vr and not venue_is_weak(vr):
+            _FETCH_STAT["api"] = _FETCH_STAT.get("api", 0) + 1
+        else:
+            # APIで取れない / レース数が足りないときだけ従来経路
+            old_vr = fetch_one_venue(engine, pc, pn, tdt, date_str)
+            if old_vr and (not vr or len(old_vr) > len(vr)):
+                print("[legacy] " + pn + ": " + str(len(old_vr))
+                      + "R (従来経路で補いました)")
+                vr = old_vr
+            elif vr:
+                _FETCH_STAT["api"] = _FETCH_STAT.get("api", 0) + 1
         if not vr:
             continue
         if not cur:
@@ -961,8 +1264,18 @@ def main():
             if pc2:
                 have_pc.setdefault(pc2, []).append(r)
 
+    print("[scan] %d会場を確認: API %d / 従来経路 %d "
+          "/ 開催なし %d / 空 %d / 開催確認エラー %d"
+          % (n_scan, _FETCH_STAT.get("api", 0), _FETCH_STAT["ok"],
+             _FETCH_STAT["closed"], _FETCH_STAT["empty"],
+             _FETCH_STAT["err_open"]))
+
     if not races:
         print("[fail] 開催会場なし or 取得0件 (メンテナンス中の可能性)")
+        print("  → APIでも従来経路でも取れませんでした。")
+        print("  → その日に開催が無いか、取得元に届いていない可能性が"
+              "あります。")
+        _probe_open(engine, tdt, date_str)
         if os.environ.get("KEIRIN_NOTIFY_FAIL", "") == "1":
             send_line("【競輪】" + date_str
                       + " 当日基本データの事前取得に失敗しました (0件)。"
