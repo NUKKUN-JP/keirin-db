@@ -264,7 +264,8 @@ def _shb_fetch(cup_id, day, rno):
     if not isinstance(data, dict):
         return None
     out = {"shb": _shb_extract(data), "race_kind": "",
-           "grade": "", "day_label": "", "pclass": {}}
+           "grade": "", "day_label": "", "pclass": {},
+           "line": _line_from_api(data)}
 
     race = data.get("race")
     if isinstance(race, dict):
@@ -313,6 +314,40 @@ def _shb_fetch(cup_id, day, rno):
             if pc:
                 out["pclass"][str(bike)] = pc
     return out
+
+
+def _line_from_api(data):
+    """ウィンチケットの linePrediction から並びを組み立てる。
+
+    v8: ミッドナイト開催で、こちらの取得経路だとラインが空のまま
+      残ることがあった (8/28 の玉野・小松島が全レース「ライン情報なし」)。
+      ところが同じAPIの linePrediction には並びが入っており、
+      別途調べた1,260レースでは100%取れていた。
+      S/B取得で既に叩いている応答なので、追加の通信は発生しない。
+
+    返り値: "534-1-2-6" の形。取れなければ ""。
+    """
+    lp = data.get("linePrediction")
+    if not isinstance(lp, dict):
+        return ""
+    chunks = []
+    for ln in (lp.get("lines") or []):
+        if not isinstance(ln, dict):
+            continue
+        grp = ""
+        for ent in (ln.get("entries") or []):
+            if not isinstance(ent, dict):
+                continue
+            for n in (ent.get("numbers") or []):
+                try:
+                    grp = grp + str(int(n))
+                except Exception:
+                    pass
+        if grp:
+            chunks.append(grp)
+    if not chunks:
+        return ""
+    return "-".join(chunks)
 
 
 def _race_parts(rec):
@@ -427,6 +462,7 @@ def apply_shb_to_races(all_races):
     applied_kind = 0
     applied_grade = 0
     applied_day = 0
+    applied_line = 0
     for ridx in results:
         got = results[ridx]
         if not got:
@@ -438,13 +474,20 @@ def apply_shb_to_races(all_races):
             gr = str(got.get("grade", "") or "")
             dl = str(got.get("day_label", "") or "")
             pcl = got.get("pclass") or {}
+            api_line = str(got.get("line", "") or "")
         else:
             shb = got
             rk = ""
             gr = ""
             dl = ""
             pcl = {}
+            api_line = ""
         rec = all_races[ridx]
+        # ラインが空のままなら、APIの並び予想で埋める。
+        #   既に入っているものは上書きしない。
+        if api_line and not str(rec.get("line", "") or "").strip():
+            rec["line"] = api_line
+            applied_line = applied_line + 1
         if rk and not str(rec.get("race_kind", "") or "").strip():
             rec["race_kind"] = rk
             applied_kind = applied_kind + 1
@@ -491,6 +534,7 @@ def apply_shb_to_races(all_races):
     print("[shb] S/B付与: " + str(applied) + " / " + str(len(all_races)) + "R")
     print("[kind] race_kind付与: " + str(applied_kind) + " / "
           + str(len(all_races)) + "R")
+    print("[line-api] 並び予想から補完: " + str(applied_line) + "R")
     print("[meta] grade付与: " + str(applied_grade)
           + " / day_label付与: " + str(applied_day)
           + " / " + str(len(all_races)) + "R")
