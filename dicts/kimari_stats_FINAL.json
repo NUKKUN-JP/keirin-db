@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated_at": "2026-09-22 08:52:26",
+  "generated_at": "2026-09-23 08:29:31",
   "source_db": "/home/runner/work/keirin-db/keirin-db/takusen/data/keirin_data_scored_v2.jsonl",
   "definition": "会場×風向×風速別 決まり手集計 + 3着位置連動 (v3)",
-  "total_races_scanned": 128562,
+  "total_races_scanned": 128629,
   "total_races_used": 89273
  },
  "cells": {
