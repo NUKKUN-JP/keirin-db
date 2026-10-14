@@ -1,0 +1,44 @@
+# 確定オッズ（3連単）を集める（BANKVISION の不安定度のため）
+# 置き場所: NUKKUN-JP/keirin-db の .github/workflows/final_odds.yml
+# スクリプト: リポジトリのいちばん上に get_final_odds_v2.py を置く（確定オッズと風を保存）
+# 動かし方: GitHub の Actions → 「final odds」→ Run workflow で、月（例 202501,202502）を入れる。空なら bvdb/ の全部の月
+name: final odds
+on:
+  workflow_dispatch:
+    inputs:
+      months:
+        description: "取る月（カンマ区切り。例 202501,202502）。空なら全部"
+        required: false
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: final-odds
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: 確定オッズを取る
+        env:
+          MONTHS: ${{ github.event.inputs.months }}
+          BVDB_DIR: bvdb
+          OUT_DIR: odds
+          SLEEP: "2"
+          MAX_MIN: "330"
+        run: python get_final_odds_v2.py
+      - name: 保存する
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add odds/
+          git diff --cached --quiet || git commit -m "確定オッズ: ${{ github.event.inputs.months }}"
+          git push
