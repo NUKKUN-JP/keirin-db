@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-04 10:04:24",
+  "generated_at": "2026-11-05 10:18:08",
   "source_db": "/home/runner/work/keirin-db/keirin-db/takusen/data/keirin_data_scored_v2.jsonl",
   "definition": "周長×カント×直線×風向×風速 + 決まり手連動カテゴリ 7パターン",
   "scenes": [
@@ -10,7 +10,7 @@
    "ホーム",
    "バック"
   ],
-  "total_races_scanned": 130994,
+  "total_races_scanned": 131069,
   "total_races_used": 80240
  },
  "by_winner_rsrank": {
